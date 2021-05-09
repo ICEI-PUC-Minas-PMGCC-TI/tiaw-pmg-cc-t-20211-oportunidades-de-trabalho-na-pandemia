@@ -1,13 +1,12 @@
-# Nome do projeto
+# Projeto Labore
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O objetivo geral deste projeto é a criação de um software que facilite o acesso à vagas de trabalho por parte de desempregados e que, simultaneamente, permita o relacionamento entre contratantes e potenciais contratados.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Ana Cristina de Souza Silva
+* Gabriel Iuri Braga Silva
+* Lucas Eduardo dos Santos Lana
 
 ## Professores responsáveis
 
