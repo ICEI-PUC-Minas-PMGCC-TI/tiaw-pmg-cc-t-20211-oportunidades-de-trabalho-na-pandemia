@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  type='text/css'>
+        <link rel="stylesheet" href= "./meu_perfil.css">
+
+        <title>Meu Perfil</title>
+    </head>
+    <body>
+
+        <!--Cabecalho-->
+        <div class = "container-fluid" id = "cabecalho_container">
+            <!--Navbar com a logo e o menu dropdown-->
+            <nav class = "navbar navbar-light" id = "navbar">
+                <a class = "navbar-brand" href = "#"><img src = "./logo.png" alt = "Logo"></a>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./index.html">Pagina Inicial</a>
+                    <a href="./meu_perfil.html">Meu Perfil</a>
+                    <a href="./cursos.html">Cursos</a>
+                    <a href="./categorias.html">Categoria de vagas</a>
+                    <a href="./testes_vocacionais.html">Testes vocacionais</a>
+                    <a href="./forum.html">Fórum</a>
+                    <a href="#">Contatos</a>
+                    <a href="./sobre_nos.html">Sobre nós</a>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+            </nav>
+        </div>
+
+        <!--Dados do usuario-->
+        <div class = "container-fluid user-container">
+            <div class = "row user-row">
+                <div class = "col-lg-4 col-xs-6 user-col">
+                    <div class = "card user-card">
+                        <div class = "card-header card-header-user">
+                            <i class="fa fa-user-circle-o"></i>
+                            <p id = "dados-usuario"><b>Nome do Usuário</b></p>
+                            
+                        </div>
+                        <div class = "card-body card-body-user">
+                            <ul id = "dados-lista">
+                                <li id = "dados-lista-item">
+                                    <p id = "deOndeSou">De onde sou... <i class="fa fa-pencil"></i></p>
+                                    <input id = "addLocation" placeholder= "Insira sua cidade, estado e país" >
+                                </li>
+                                <li id = "dados-lista-item">
+                                    <p id = "minhaFormacao">Minha Formação... <i class="fa fa-pencil"></i></p>
+                                    <input id = "addF" placeholder= "Instituição onde terminou/cursa o Ensino Médio">
+                                    <input id = "addF" placeholder= "Instituição onde terminou/cursa o técnico">
+                                    <input id = "addF" placeholder= "Instituição onde terminou/cursa a graduação">
+                                    <button type = "button" id = "addMore"><i class='fa fa-plus'></i> Adicionar mais formação</button>
+                                </li>
+                                <li id = "dados-lista-item">
+                                    <p id = "minhaExperiencia">Minha Experiência... <i class="fa fa-pencil"></i></p>
+                                    <input id = "addF" placeholder= "Primeira empresa onde trabalhou">
+                                    <input id = "addF" placeholder= "Segunda empresa onde trabalhou">
+                                    <button type = "button" id = "addMore"><i class='fa fa-plus'></i> Adicionar mais experiência</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+                <div class = "col-lg-8 col-xs-6 user-options-col">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a href="#favoritos" class="nav-link active" data-toggle="tab">Vagas favoritas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#candidaturas" class="nav-link" data-toggle="tab">Minhas candidaturas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#cursos" class="nav-link" data-toggle="tab">Meus cursos</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="favoritos">
+                            <div class = "container-fluid favoritos-container">
+                                <div class = "row favoritos-row">
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "row favoritos-row">
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "row favoritos-row">
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4 favoritos-col">
+                                        <div class = "card favoritos-card">
+                                            <div class = "card-header card-header-favoritos">
+                                                
+                                            </div>
+                                            <div class = "card-body card-body-favoritos">
+                                                <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, 
+                                                    euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="candidaturas">
+                            <p>Você ainda não se candidatou para nenhuma vaga</p>
+                        </div>
+                        <div class="tab-pane fade" id="cursos">
+                            <p>Você ainda não se cadastrou em nunhum curso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "./function.js"></script>
+    </body>
+</html>

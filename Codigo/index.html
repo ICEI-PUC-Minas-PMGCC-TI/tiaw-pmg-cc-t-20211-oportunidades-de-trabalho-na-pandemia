@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang = "pt-br" >
+    <head>
+        <meta charset = "UTF-8">
+        <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  type='text/css'>
+        <link rel="stylesheet" href= "./style.css">
+
+        <title>Página Inicial</title>
+    </head>
+    <body>
+        <!--Cabeçalho-->
+        <div class = "container-fluid" id = "cabecalho_container">
+            
+            <!--Navbar com a logo e o menu dropdown-->
+            <nav class = "navbar navbar-light" id = "navbar">
+                <a class = "navbar-brand" href = "#"><img src = "./logo.png" alt = "Logo"></a>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./index.html">Pagina Inicial</a>
+                    <a href="./meu_perfil.html">Meu Perfil</a>
+                    <a href="./cursos.html">Cursos</a>
+                    <a href="./categorias.html">Categoria de vagas</a>
+                    <a href="./testes_vocacionais.html">Testes vocacionais</a>
+                    <a href="./forum.html">Fórum</a>
+                    <a href="#">Contatos</a>
+                    <a href="./sobre_nos.html">Sobre nós</a>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+            </nav>
+
+            <!--Caixa de pesquisa de vagas com filtros-->
+            <div class = "container-fluid" id = "pesquisa-container">
+                <div class = "row" id = "pesquisa-titulo-row">
+                    <div class = "col-md-8 mx-auto" id = "pesquisa-titulo-col">
+                        <h4>Encontre a oportunidade de trabalho que você procura</h4>
+                    </div>
+                </div>
+                <div class = "row" id = "caixa-pesquisa-row">
+                    <div class = "col-md-8 mx-auto" id = "caixa-pesquisa-col">
+                        <form class = "search">
+                            <input type = "text" placeholder= "Digite um cargo, uma empresa e/ou uma região" id = "pesquisa-vagas">
+                        </form>
+                    </div>
+                </div>
+                <div class = "row" id = "filtros">
+                    <div class = "col-md-7 mx-auto" id = "filtros-col">
+                        <button class = "PCDbtn">
+                            <i class="fa fa-wheelchair-alt"></i>
+                            Vagas para PCD
+                        </button>
+                        <button class = "Estagiobtn">
+                            <i class="fa fa-mortar-board"></i>
+                            Estágio & Trainee
+                        </button>
+                        <button class = "Experienciabtn">
+                            <i class="fa fa-exclamation-triangle"></i>
+                            Sem experiência
+                        </button>
+                        <button class = "Filtrobtn">
+                            <p id = "plus_filter">Mais filtros</p>
+                            <i class = "fa fa-angle-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Seção de cadastros-->
+        <div class = "container" id = "convite-cadastro">
+            <div class = "row">
+                <div class = "col-md-8 mx-auto" id = "convite-cadastro-col">
+                    <h2>Deseja se cadastrar?</h3>
+                </div>
+            </div>
+            <div class = "row" id = "cadastro-row">
+                <div class = "col-md-10 mx-auto" id = "cadastro-btns">
+                    <button type = "button" class = "empresa">Como empresa</button>
+                    <button type = "button" class = "candidato">Como candidato</button>
+                </div>
+            </div>
+        </div>
+        
+
+        <!--Seção de áreas de atuação-->
+        <div class = "container" id = "areas">
+            <hr>
+            <div class = "row">
+                <div class = "col-md-8 mx-auto" id = "areas-col">
+                    <h2>Selecione sua área de atuação e encontre vagas</h3>
+                </div>
+            </div>
+            <div class = "row" id = "areas-dropdown-row">
+                <div class = "col-lg-12" id = "areas-dropdown">
+                    <div class = "dropdown areas-dropdown">
+                        <button class = "dropbtn dropbtn-areas"><p id = "areas-btn-title">Áreas de atuação</p><i class="fa fa-angle-double-down"></i></button>
+                        <div class="dropdown-content dropdown-content-area">
+                            <a href="#">Administração</a>
+                            <a href="#">Biotecnologia</a>
+                            <a href="#">Contabilidade</a>
+                            <a href="#">Design</a>
+                            <a href="#">Educação</a>
+                            <a href="#">Farmácia</a>
+                            <a href="#">Gastronomia</a>
+                            <a href="#">Informática</a>
+                            <a href="#">Jornalismo</a>
+                            <a href="#">Logística</a>
+                            <a href="#">Medicina</a>
+                            <a href="#">Odontologia</a>
+                            <a href="#">Psicologia</a>
+                            <a href="#">Química</a>
+                            <a href="#">Recursos Humanos</a>
+                            <a href="#">Saúde</a>
+                            <a href="#">Tecnologia</a>
+                            <a href="#">Veterinária</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class =  "container-fluid w-100" id = "carousel-vagas-container">
+                <div id="carousel-vagas" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class = "container">
+                                <div class = "row" id="slides" >
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class = "container">
+                                <div class = "row" id="slides" >
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class = "container">
+                                <div class = "row" id="slides" >
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "col-lg-4" id="vaga">
+                                        <div class = "card vaga-card">
+                                            <div class = "card-header card-header-vaga">
+                                                Vaga 1
+                                            </div>
+                                            <div class = "card-body card-body-vaga">
+                                                Este é um exemplo de vaga
+                                            </div>
+                                            <div class = "card-footer card-footer-vaga">
+                                                Adcionar a playlist
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class = "row" id = "areas-ajuda-row">
+                <div class = "col-lg-12" id = "areas-ajuda">
+                    <p id = "semArea">Não consegue encontrar sua área?<a href = "#"> Contate-nos!</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Seção de Sobre nós e Contatos-->
+        <div class = "container-fluid AboutUs">
+            <div class = "row AboutUs-row">
+                <div class = "col-lg-5 AboutUs-col">
+                    <h5 id = "AboutUs-title">Sobre nós</h5>
+                    <hr>
+                    <p id = "AboutUs-text">Este é um site de vagas de emprego construido por alunos do 1º período
+                        do curso de Ciência da Computação, na disciplina de Trabalho Interdisciplinar - Aplicaçôes Web, 
+                        na Pontifícia Universidade Católica de Minas Gerais.
+                    </p>
+                </div>
+                <div class = "col-lg-4 Contacts-col">
+                    <h5 id = "Contacts-title">Contatos</h5>
+                    <hr>
+                    <ul id = "lista-contatos">
+                        <li id = "email"><i class="fa fa-envelope"></i><p id = "contact-item"><b>E-mail:</b> labore.com@gmail.com</p></li>
+                        <li id = "email"><i class="fa fa-phone"></i><p id = "contact-item"><b>Telefone:</b> 0800 1234 5678</p></li>
+                        <li id = "email"><i class="fa fa-whatsapp"></i><p id = "contact-item"><b>WhatsApp:</b> 31 91234 5678</p></li>
+                    </ul>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+                <div class = "col-lg-3 logo-col">
+                    <img src = "./logo.png" id = "rodape-logo">
+                </div>
+            </div>
+        </div>
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "./function.js"></script>
+    </body>
+</html>

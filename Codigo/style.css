@@ -1,0 +1,535 @@
+/* Geral */
+
+body {
+    overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cabecalho */
+
+#cabecalho_container {
+    height: 451px;
+    width: 100%;
+    background-color: rgb(136, 192, 252);
+}
+
+a.navbar-brand img {
+    height: 56px;
+    width: auto;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 450px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: rgb(47, 1, 248); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+  
+  /* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: black;
+}
+  
+  /* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+  /* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(136, 192, 252);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+  
+.openbtn:hover {
+    background-color: rgb(47, 1, 248);
+}
+
+.openbtn:focus {
+      outline-width: 0px;
+}
+
+a.closebtn {
+    color: white;
+}
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+
+#pesquisa-container {
+    background-color: transparent;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+#pesquisa-titulo-col {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+#input-btn {
+    width: 80%;
+    position: relative;
+}
+
+#pesquisa-vagas {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 0px;
+    text-indent: 30px;
+}
+
+#pesquisa-vagas:focus {
+    outline-width: 0px;
+}
+
+#filtros-col {
+    margin-top: 40px;
+    width: fit-content;
+}
+
+.PCDbtn {
+    border: 0px;
+    border-radius: 15px;
+    font-size: 14px;
+    width: 25%;
+    height: 35px;
+    cursor: pointer;
+    display: inline;
+    background-color: white;
+}
+
+.PCDbtn:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
+}
+
+.PCDbtn:focus {
+    background-color: rgb(47, 1, 248);
+    color: white;
+    outline-width: 0px;
+}
+
+i.fa-wheelchair-alt {
+    padding-right: 10px;
+}
+
+.Estagiobtn {
+    border: 0px;
+    border-radius: 15px;
+    font-size: 14px;
+    width: 25%;
+    height: 35px;
+    cursor: pointer;
+    display: inline;
+    background-color: white;
+}
+
+.Estagiobtn:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
+}
+
+.Estagiobtn:focus {
+    background-color: rgb(47, 1, 248);
+    color: white;
+    outline-width: 0px;
+}
+
+i.fa-mortar-board {
+    padding-right: 10px;
+}
+
+.Experienciabtn {
+    border: 0px;
+    border-radius: 15px;
+    font-size: 14px;
+    width: 25%;
+    height: 35px;
+    cursor: pointer;
+    display: inline;
+    background-color: white;
+}
+
+.Experienciabtn:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
+}
+
+.Experienciabtn:focus {
+    background-color: rgb(47, 1, 248);
+    color: white;
+    outline-width: 0px;
+}
+
+i.fa-exclamation-triangle {
+    padding-right: 10px;
+}
+
+.Filtrobtn {
+    width: 23%;
+    height: 35px;
+    display: inline;
+    border: 0px;
+    border-radius: 15px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.Filtrobtn:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
+}
+
+.Filtrobtn:focus {
+    background-color: rgb(47, 1, 248);
+    outline-width: 0px;
+    color: white;
+}
+
+#plus_filter {
+    display: inline;
+    padding-left: 15px;
+}
+
+i.fa-angle-down {
+    display: inline;
+    float: right;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+@media screen and ( max-width: 1280px ) {
+    .PCDbtn {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 1280px ) {
+    .Estagiobtn {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 1280px ) {
+    .Experienciabtn {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 1280px ) {
+    .Filtrobtn {
+        width: 100%;
+    }
+}
+
+@media screen and ( max-width: 1280px ) {
+    i.fa-angle-down {
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+}
+
+
+/* Área de convite para cadastrar */
+
+#convite-cadastro {
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+}
+
+#convite-cadastro-col {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#cadastro-row {
+    padding-top: 60px;
+}
+
+.empresa {
+    width: 40%;
+    height: 50px;
+    border: 1px solid rgb(136, 192, 252);
+    cursor: pointer;
+}
+
+.empresa:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
+}
+
+.empresa:focus {
+    background-color: rgb(47, 1, 248);
+    color: white;
+    outline-width: 0px;;
+}
+
+.candidato {
+    width: 40%;
+    margin-left: 19%;
+    height: 50px;
+    border: 1px solid rgb(136, 192, 252);
+    cursor: pointer;
+}
+
+.candidato:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
+}
+
+.candidato:focus {
+    background-color: rgb(47, 1, 248);
+    color: white;
+    outline-width: 0px;;
+}
+
+/* Seção de áreas de atuação */
+
+#areas {
+    height: fit-content;
+    width: 100%;
+}
+
+#areas-col {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#areas-dropdown-row {
+    padding-top: 40px;
+}
+
+#areas-dropdown {
+    display: inline;
+}
+
+
+#areas-ajuda-row {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#areas-ajuda {
+    display: inline;
+}
+
+#semArea {
+    display: inline;
+    float: right;
+}
+
+.dropbtn-areas {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid rgb(136, 192, 252);
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.areas-dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content-area {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content-area a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-area a:hover {
+    background-color: rgb(136, 192, 252);
+}
+
+.areas-dropdown:hover .dropdown-content-area {
+    display: block;
+}
+
+.areas-dropdown:hover .dropbtn-areas {
+    background-color: rgb(47, 1, 248);
+}
+
+#areas-btn-title {
+    display: inline;
+    float: left;
+    margin-bottom: 0px;
+}
+
+i.fa-angle-double-down {
+    display: inline;
+    float: right;
+    padding-top: 4px;
+}
+
+/* Carousel de vagas */
+
+#carousel-vagas-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.carousel-indicators li {
+    visibility: hidden;
+}
+
+#carousel-vagas {
+    height: fit-content;
+}
+
+#vaga {
+    padding-bottom: 40px;
+}
+
+/*Seção sobre nós */
+
+.AboutUs  {
+    height: fit-content;
+    background-color: rgb(136, 192, 252);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.AboutUs-col {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: justify;
+}
+
+.Contacts-col {
+    padding-top: 40px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+i.fa-envelope {
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+i.fa-phone {
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+i.fa-whatsapp {
+    display: inline;
+    float: left;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+#lista-contatos {
+    padding-left: 0px;
+}
+
+#contact-item {
+    display: inline;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+#rodape-logo {
+    width: 100%;
+    height: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+}

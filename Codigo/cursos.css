@@ -1,0 +1,167 @@
+/* Geral */
+
+body {
+    overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Cabecalho */
+
+#cabecalho_container {
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(136, 192, 252);
+}
+
+a.navbar-brand img {
+    height: 56px;
+    width: auto;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 450px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: rgb(47, 1, 248); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+  
+  /* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: black;
+}
+  
+  /* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+  /* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(136, 192, 252);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+  
+.openbtn:hover {
+    background-color: rgb(47, 1, 248);
+}
+
+.openbtn:focus {
+      outline-width: 0px;
+}
+
+a.closebtn {
+    color: white;
+}
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+
+/* Cursos */
+
+.dropdown-col {
+    padding-top: 40px;
+}
+
+#cursos-destaque {
+    width: fit-content;
+    display: inline;
+    float: left;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    margin: 0px;
+}
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid rgb(136, 192, 252);
+    cursor: pointer;
+}
+
+i.fa-angle-double-down {
+    display: inline;
+    float: right;
+    padding-top: 4px;
+    padding-left: 10px;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 195px;
+    max-height: 200px;
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+
+.dropdown-content a:hover {
+    background-color: rgb(136, 192, 252);
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(47, 1, 248);
+}
+  
+.cursos-body-row {
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.cursos-col {
+    padding-bottom: 50px;
+}
