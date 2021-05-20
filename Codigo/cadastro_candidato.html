@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  type='text/css'>
+        <link rel="stylesheet" href= "./cadastro_candidato.css">
+
+        <title>Cadastre-se!</title>
+    </head>
+    <body>
+
+        <!--Cabecalho-->
+        <div class = "container-fluid" id = "cabecalho_container">
+            <!--Navbar com a logo e o menu dropdown-->
+            <nav class = "navbar navbar-light" id = "navbar">
+                <a class = "navbar-brand" href = "#"><img src = "./logo.png" alt = "Logo"></a>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./index.html">Pagina Inicial</a>
+                    <a href="./meu_perfil.html">Meu Perfil</a>
+                    <a href="./cursos.html">Cursos</a>
+                    <a href="./categorias.html">Categoria de vagas</a>
+                    <a href="./testes_vocacionais.html">Testes vocacionais</a>
+                    <a href="./forum.html">Fórum</a>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+            </nav>
+        </div>
+
+        <!--Formulario-->
+        <div class = "container container-cadastro">
+            <div class = "row title-row">
+                <div class = "col-lg-12 md-auto">
+                    <h3 style="margin-bottom: 0px; padding-bottom: 40px;">Formulário de Cadastro</h3>
+                </div>
+            </div>
+            <div class = "row form-row">
+                <div class = "col-lg-12 form-col">
+                    <form id = "cadastro_form">
+
+                        <div class="line-break"><h5 style="margin-bottom: 30px;">Dados Pessoais</h5></div>
+                        <label for = "nome">Nome completo:</label><br>
+                        <input id = "nome" type = "text" name = "nome">
+                        <label for = "nascimento">Data de nascimento:</label><br>
+                        <input id = "nascimento" type = "date" name = "nascimento">
+                        <label for = "genero">Gênero:</label><br>
+                        <select id="genero" name="genero">
+                            <option value="selecionar">Selecione um gênero</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                            <option value="nao_quero">Prefiro não informar</option>
+                        </select>
+
+                        <div class="line-break"></div>
+                        <label for = "telefone">Telefone:</label><br>
+                        <input id = "telefone" type="text" name = "telefone">
+                        <label for = "celular">Celular:</label><br>
+                        <input id = "celular" type="text" name = "celular">
+                        <label for = "email">E-mail:</label><br>
+                        <input id = "email" type="email" name = "celular">
+                        <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Formação Acadêmica</h5></div>
+                        <label for = "escolaridade">Escolaridade:</label>
+                        <select id="escolaridade" name="escolaridade">
+                            <option value="selecionar">Selecione sua escolaridade</option>
+                            <option value="fundamental_in">Ensino Fundamental incompleto</option>
+                            <option value="fundamental_com">Ensino Fundamental completo</option>
+                            <option value="medio_in">Ensino Médio incompleto</option>
+                            <option value="medio_com">Ensino Médio completo</option>
+                            <option value="superior_in">Ensino Superior incompleto</option>
+                            <option value="superior_com">Ensino Superior completo</option>
+                        </select>
+                        <label for = "instituicao">Instituição:</label>
+                        <input id = "instituicao" type="text" name = "instituicao">
+
+                        <div class="line-break"></div>
+                        <label for = "escolaridade">Escolaridade:</label>
+                        <select id="escolaridade" name="escolaridade">
+                            <option value="selecionar">Selecione sua escolaridade</option>
+                            <option value="fundamental_in">Ensino Fundamental incompleto</option>
+                            <option value="fundamental_com">Ensino Fundamental completo</option>
+                            <option value="medio_in">Ensino Médio incompleto</option>
+                            <option value="medio_com">Ensino Médio completo</option>
+                            <option value="superior_in">Ensino Superior incompleto</option>
+                            <option value="superior_com">Ensino Superior completo</option>
+                        </select>
+                        <label for = "instituicao">Instituição:</label>
+                        <input id = "instituicao" type="text" name = "instituicao">
+
+                        <div class="line-break"></div>
+                        <label for = "escolaridade">Escolaridade:</label>
+                        <select id="escolaridade" name="escolaridade">
+                            <option value="selecionar">Selecione sua escolaridade</option>
+                            <option value="fundamental_in">Ensino Fundamental incompleto</option>
+                            <option value="fundamental_com">Ensino Fundamental completo</option>
+                            <option value="medio_in">Ensino Médio incompleto</option>
+                            <option value="medio_com">Ensino Médio completo</option>
+                            <option value="superior_in">Ensino Superior incompleto</option>
+                            <option value="superior_com">Ensino Superior completo</option>
+                        </select>
+                        <label for = "instituicao">Instituição:</label>
+                        <input id = "instituicao" type="text" name = "instituicao">
+                        <button type = "button" id = "mais_formacao"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais formação</button>
+                        
+                        <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Experiência Profissional</h5></div>
+                        <label for = "empresa">Empresa:</label>
+                        <input id = "empresa" type="text" name = "emrpesa">
+                        <label for = "cargo">Cargo:</label>
+                        <input id = "cargo" type="text" name = "cargo">
+                        <label for = "tempo">Tempo de atuação:</label>
+                        <input id = "tempo" name = "name" type="text">
+
+                        <div class = "line-break"></div>
+                        <label for = "empresa">Empresa:</label>
+                        <input id = "empresa" type="text" name = "emrpesa">
+                        <label for = "cargo">Cargo:</label>
+                        <input id = "cargo" type="text" name = "cargo">
+                        <label for = "tempo">Tempo de atuação:</label>
+                        <input id = "tempo" name = "name" type="text">
+
+                        <div class = "line-break"></div>
+                        <label for = "empresa">Empresa:</label>
+                        <input id = "empresa" type="text" name = "emrpesa">
+                        <label for = "cargo">Cargo:</label>
+                        <input id = "cargo" type="text" name = "cargo">
+                        <label for = "tempo">Tempo de atuação:</label>
+                        <input id = "tempo" name = "name" type="text">
+                        <button type = "button" id = "mais_experiencia"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais experiência</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "./function.js"></script>
+        <script src = "./funcoes_cadastro.js"></script>
+    </body>
+</html>
