@@ -47,93 +47,232 @@
                     <form id = "cadastro_form">
 
                         <div class="line-break"><h5 style="margin-bottom: 30px;">Dados Pessoais</h5></div>
-                        <label for = "nome">Nome completo:</label><br>
-                        <input id = "nome" type = "text" name = "nome">
-                        <label for = "nascimento">Data de nascimento:</label><br>
-                        <input id = "nascimento" type = "date" name = "nascimento">
-                        <label for = "genero">Gênero:</label><br>
-                        <select id="genero" name="genero">
-                            <option value="selecionar">Selecione um gênero</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="outro">Outro</option>
-                            <option value="nao_quero">Prefiro não informar</option>
-                        </select>
+                        <div class = "row" style="width: 100%;">
+                            <div class="col-lg-6" style="margin-bottom: 15px;">
+                                <label for = "nome">Nome completo:</label><br>
+                                <input id = "nome" type = "text" name = "nome">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "nascimento">Data de nascimento:</label><br>
+                                <input id = "nascimento" type = "date" name = "nascimento">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "genero">Gênero:</label><br>
+                                <select id="genero" name="genero">
+                                    <option>Selecione um gênero</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Outro</option>
+                                    <option>Prefiro não informar</option>
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="line-break"></div>
-                        <label for = "telefone">Telefone:</label><br>
-                        <input id = "telefone" type="text" name = "telefone">
-                        <label for = "celular">Celular:</label><br>
-                        <input id = "celular" type="text" name = "celular">
-                        <label for = "email">E-mail:</label><br>
-                        <input id = "email" type="email" name = "celular">
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-6" style="margin-bottom: 15px;">
+                                <label for = "email">E-mail:</label><br>
+                                <input id = "email" type="email" name = "celular">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "telefone">Telefone:</label><br>
+                                <input id = "telefone" type="text" name = "telefone">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "celular">Celular:</label><br>
+                                <input id = "celular" type="text" name = "celular">
+                            </div>
+                        </div>
+
+                        <!--<div class="line-break"></div>
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "cep">CEP: </label><br>
+                                <input id = "cep" type = "text">
+                            </div>
+                            <div class = "col-lg-2" style="margin-bottom: 15px;">
+                                <br><button type = "button" id = "consultar" style="width: 100%;margin-top: 15px;" onclick="localizacao()">Consultar</button>
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "cidade">Cidade: </label><br>
+                                <input id = "cidade" type = "text" disabled>
+                            </div>
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "estado">Estado: </label><br>
+                                <select id="estado" name="estado">
+                                    <option>Selecione um estado</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Outro</option>
+                                    <option>Prefiro não informar</option>
+                                </select>
+                            </div>
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "cidade">Cidade: </label><br>
+                                <select id="cidade" name="cidade" disabled>
+                                    <option>Selecione uma cidade</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Outro</option>
+                                    <option>Prefiro não informar</option>
+                                </select>
+                            </div>
+                        </div>-->
+
                         <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Formação Acadêmica</h5></div>
-                        <label for = "escolaridade">Escolaridade:</label>
-                        <select id="escolaridade" name="escolaridade">
-                            <option value="selecionar">Selecione sua escolaridade</option>
-                            <option value="fundamental_in">Ensino Fundamental incompleto</option>
-                            <option value="fundamental_com">Ensino Fundamental completo</option>
-                            <option value="medio_in">Ensino Médio incompleto</option>
-                            <option value="medio_com">Ensino Médio completo</option>
-                            <option value="superior_in">Ensino Superior incompleto</option>
-                            <option value="superior_com">Ensino Superior completo</option>
-                        </select>
-                        <label for = "instituicao">Instituição:</label>
-                        <input id = "instituicao" type="text" name = "instituicao">
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "escolaridade">Escolaridade:</label>
+                                <select id="escolaridade1" name="escolaridade">
+                                    <option>Selecione sua escolaridade</option>
+                                    <option>Ensino Fundamental incompleto</option>
+                                    <option>Ensino Fundamental completo</option>
+                                    <option>Ensino Médio incompleto</option>
+                                    <option>Ensino Médio completo</option>
+                                    <option>Ensino Superior incompleto</option>
+                                    <option>Ensino Superior completo</option>
+                                </select>
+                            </div>
+                            <div class = "col-lg-8" style="margin-bottom: 15px;">
+                                <label for = "instituicao">Instituição:</label>
+                                <input id = "instituicao1" type="text" name = "instituicao">
+                            </div>
+                        </div>
 
                         <div class="line-break"></div>
-                        <label for = "escolaridade">Escolaridade:</label>
-                        <select id="escolaridade" name="escolaridade">
-                            <option value="selecionar">Selecione sua escolaridade</option>
-                            <option value="fundamental_in">Ensino Fundamental incompleto</option>
-                            <option value="fundamental_com">Ensino Fundamental completo</option>
-                            <option value="medio_in">Ensino Médio incompleto</option>
-                            <option value="medio_com">Ensino Médio completo</option>
-                            <option value="superior_in">Ensino Superior incompleto</option>
-                            <option value="superior_com">Ensino Superior completo</option>
-                        </select>
-                        <label for = "instituicao">Instituição:</label>
-                        <input id = "instituicao" type="text" name = "instituicao">
-
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "escolaridade">Escolaridade:</label>
+                                <select id="escolaridade2" name="escolaridade">
+                                    <option>Selecione sua escolaridade</option>
+                                    <option>Ensino Fundamental incompleto</option>
+                                    <option>Ensino Fundamental completo</option>
+                                    <option>Ensino Médio incompleto</option>
+                                    <option>Ensino Médio completo</option>
+                                    <option>Ensino Superior incompleto</option>
+                                    <option>Ensino Superior completo</option>
+                                </select>
+                            </div>
+                            <div class = "col-lg-8" style="margin-bottom: 15px;">
+                                <label for = "instituicao">Instituição:</label>
+                                <input id = "instituicao2" type="text" name = "instituicao">
+                            </div>
+                        </div>
+                        
                         <div class="line-break"></div>
-                        <label for = "escolaridade">Escolaridade:</label>
-                        <select id="escolaridade" name="escolaridade">
-                            <option value="selecionar">Selecione sua escolaridade</option>
-                            <option value="fundamental_in">Ensino Fundamental incompleto</option>
-                            <option value="fundamental_com">Ensino Fundamental completo</option>
-                            <option value="medio_in">Ensino Médio incompleto</option>
-                            <option value="medio_com">Ensino Médio completo</option>
-                            <option value="superior_in">Ensino Superior incompleto</option>
-                            <option value="superior_com">Ensino Superior completo</option>
-                        </select>
-                        <label for = "instituicao">Instituição:</label>
-                        <input id = "instituicao" type="text" name = "instituicao">
-                        <button type = "button" id = "mais_formacao"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais formação</button>
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "escolaridade">Escolaridade:</label>
+                                <select id="escolaridade3" name="escolaridade">
+                                    <option>Selecione sua escolaridade</option>
+                                    <option>Ensino Fundamental incompleto</option>
+                                    <option>Ensino Fundamental completo</option>
+                                    <option>Ensino Médio incompleto</option>
+                                    <option>Ensino Médio completo</option>
+                                    <option>Ensino Superior incompleto</option>
+                                    <option>Ensino Superior completo</option>
+                                </select>
+                            </div>
+                            <div class = "col-lg-8" style="margin-bottom: 15px;">
+                                <label for = "instituicao">Instituição:</label>
+                                <input id = "instituicao3" type="text" name = "instituicao">
+                            </div>
+                        </div>
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-12" style="margin-bottom: 15px;">
+                                <button type = "button" id = "mais_formacao" style="display: inline; float: right;"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais formação</button>
+                            </div>
+                        </div>
                         
                         <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Experiência Profissional</h5></div>
-                        <label for = "empresa">Empresa:</label>
-                        <input id = "empresa" type="text" name = "emrpesa">
-                        <label for = "cargo">Cargo:</label>
-                        <input id = "cargo" type="text" name = "cargo">
-                        <label for = "tempo">Tempo de atuação:</label>
-                        <input id = "tempo" name = "name" type="text">
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-5" style="margin-bottom: 15px;">
+                                <label for = "empresa">Empresa:</label>
+                                <input id = "empresa1" type="text" name = "emrpesa">
+                            </div>
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "cargo">Cargo:</label>
+                                <input id = "cargo1" type="text" name = "cargo">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "tempo">Tempo de atuação:</label>
+                                <input id = "tempo1" name = "name" type="text">
+                            </div>
+                        </div>
 
-                        <div class = "line-break"></div>
-                        <label for = "empresa">Empresa:</label>
-                        <input id = "empresa" type="text" name = "emrpesa">
-                        <label for = "cargo">Cargo:</label>
-                        <input id = "cargo" type="text" name = "cargo">
-                        <label for = "tempo">Tempo de atuação:</label>
-                        <input id = "tempo" name = "name" type="text">
+                        <div class="line-break"></div>
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-5" style="margin-bottom: 15px;">
+                                <label for = "empresa">Empresa:</label>
+                                <input id = "empresa2" type="text" name = "emrpesa">
+                            </div>
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "cargo">Cargo:</label>
+                                <input id = "cargo2" type="text" name = "cargo">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "tempo">Tempo de atuação:</label>
+                                <input id = "tempo2" name = "name" type="text">
+                            </div>
+                        </div>
 
-                        <div class = "line-break"></div>
-                        <label for = "empresa">Empresa:</label>
-                        <input id = "empresa" type="text" name = "emrpesa">
-                        <label for = "cargo">Cargo:</label>
-                        <input id = "cargo" type="text" name = "cargo">
-                        <label for = "tempo">Tempo de atuação:</label>
-                        <input id = "tempo" name = "name" type="text">
-                        <button type = "button" id = "mais_experiencia"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais experiência</button>
+                        <div class="line-break"></div>
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-5" style="margin-bottom: 15px;">
+                                <label for = "empresa">Empresa:</label>
+                                <input id = "empresa3" type="text" name = "emrpesa">
+                            </div>
+                            <div class = "col-lg-4" style="margin-bottom: 15px;">
+                                <label for = "cargo">Cargo:</label>
+                                <input id = "cargo3" type="text" name = "cargo">
+                            </div>
+                            <div class = "col-lg-3" style="margin-bottom: 15px;">
+                                <label for = "tempo">Tempo de atuação:</label>
+                                <input id = "tempo3" name = "tempo" type="text">
+                            </div>
+                        </div>
+                        <div class = "row" style="width: 100%;">
+                            <div class = "col-lg-12" style="margin-bottom: 15px;">
+                                <button type = "button" id = "mais_experiencia" style="display: inline; float: right;"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais experiência</button>
+                            </div>
+                        </div>
+
+                        <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Dados do Perfil</h5></div>
+                        <div class = "row" style="width: 100%;">
+                            <div class="col-lg-6" style="margin-bottom: 15px;">
+                            <label for = "sobre_mim">Sobre mim:</label>
+                            <span class = "code">
+                                <b>
+                                    <textarea id = "sobre_mim"></textarea>
+                                </b>
+                            </span>
+                            </div>
+                            <div class = "col-lg-6" style="margin-bottom: 15px; justify-content: center; display: flex; align-items: center;">
+                                <div class="image-upload-one">
+                                    <div>
+                                        <div class="form-input" style="height: 200px; width: auto;">
+                                            <label for = "img_one">Selecione a foto de perfil:</label>
+                                            <label for="file-ip-1" style="height: fit-content; width: fit-content; display: flex; justify-content: center; align-items: center;">
+                                                <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png" >
+                                            </label>
+                                        </div>
+                                        <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+                                        <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()">Remover imagem</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "row" style = "width: 100%; margin-bottom: 40px; margin-top: 50px;">
+                            <div class = "col-lg-12 ml-auto">
+                                <button type = "submit" id = "form_btn">Cadastrar</button>
+                                <script>
+                                    document.addEventListener ( 'DOMContentLoaded', () => {
+                                        document.getElementById ('form_btn').addEventListener('click', registerCandidate );
+                                    });
+                                </script>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
