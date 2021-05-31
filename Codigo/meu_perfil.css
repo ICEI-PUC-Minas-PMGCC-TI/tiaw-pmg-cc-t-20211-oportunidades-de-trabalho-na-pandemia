@@ -14,11 +14,13 @@ ul {
 #cabecalho_container {
     height: fit-content;
     width: 100%;
-    background-color: rgb(136, 192, 252);
+    background-color: rgb(205, 226, 248);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 8px;
 }
 
 a.navbar-brand img {
-    height: 56px;
+    height: 70px;
     width: auto;
 }
 
@@ -64,7 +66,7 @@ a.navbar-brand img {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: rgb(136, 192, 252);
+    background-color: rgb(205, 226, 248);;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -101,13 +103,6 @@ a.closebtn {
     padding-right: 0px;
 }
 
-/*@media screen and ( max-width: 768px )
-{
-    .user-card {
-        display: none;
-    }
-}*/
-
 .card-header-user {
     height: 150px;
     display: flex;
@@ -123,6 +118,9 @@ i.fa-user-circle-o::before {
 #dados-usuario {
     margin-left: 10px;
     font-size: 25px;
+}
+
+#usuario {
 }
 
 .card-body-user {
@@ -150,7 +148,7 @@ i.fa-user-circle-o::before {
     font-size: 20px;
 }
 
-#addF {
+#addF1, #addF2, #addF3, #addE1, #addE2 {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -158,6 +156,8 @@ i.fa-user-circle-o::before {
     border-bottom: 1px solid black;
     width: 100%;
 }
+
+
 
 #addMore {
     border: none;
@@ -195,4 +195,30 @@ i.fa-pencil {
 
 .favoritos-card {
     height: fit-content;
+}
+
+#sobre_mim_tab {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+label[for=sobre_mim], #sobre_mim {
+    display: inline;
+    float: left;
+}
+
+label[for=sobre_mim] {
+    margin-bottom: 0px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+#sobre_mim {
+    height: 150px;
+    width: 100%;
+    margin-left: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 0px;
+    padding-left: 10px;
 }

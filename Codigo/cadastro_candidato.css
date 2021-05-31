@@ -18,7 +18,8 @@ ul {
 #cabecalho_container {
     height: fit-content;
     width: 100%;
-    background-color: rgb(136, 192, 252);
+    background-color: rgb(205, 226, 248);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 a.navbar-brand img {
@@ -68,7 +69,7 @@ a.navbar-brand img {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: rgb(136, 192, 252);
+    background-color: rgb(205, 226, 248);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -96,7 +97,6 @@ a.closebtn {
 /* Formulario */
 
 .container-cadastro {
-    background-color: lightgray;
     padding-top: 40px;
     text-align: center;
     width: 100%;
@@ -120,7 +120,8 @@ form:last-child {
 }
 
 label[for=nome], #nome {
-    display: inline-block;
+    display: inline;
+    float: left;
 }
 
 label[for=nome] {
@@ -131,12 +132,14 @@ label[for=nome] {
 }
 
 #nome {
-    width: 30%;
+    width: 100%;
     height: 30px;
+    margin-left: 15px;
 }
 
 label[for=nascimento], #nascimento {
-    display: inline-block;
+    display: inline;
+    float: left;
 }
 
 label[for=nascimento] {
@@ -147,8 +150,9 @@ label[for=nascimento] {
 }
 
 #nascimento {
-    width: 15%;
+    width: 100%;
     height: 30px;
+    margin-left: 15px;
 }
 
 label[for=genero] {
@@ -159,15 +163,19 @@ label[for=genero] {
 }
 
 label[for=genero], #genero {
-    display: inline-block;
+    display: inline;
+    float: left;
 }
 
 #genero {
     height: 30px;
+    width: 100%;
+    margin-left: 15px;
 }
 
 label[for=telefone], #telefone {
-    display: inline-block;
+    display: inline;
+    float: left;
 }
 
 label[for=telefone] {
@@ -179,10 +187,13 @@ label[for=telefone] {
 
 #telefone {
     height: 30px;
+    width: 100%;
+    margin-left: 15px;
 }
 
 label[for=celular], #celular {
-    display: inline-block;
+    display: inline;
+    float: left;
 }
 
 label[for=celular] {
@@ -194,10 +205,13 @@ label[for=celular] {
 
 #celular {
     height: 30px;
+    width: 100%;
+    margin-left: 15px;
 }
 
 label[for=email], #email {
-    display: inline-block;
+    display: inline;
+    float: left;
 }
 
 label[for=email] {
@@ -209,11 +223,13 @@ label[for=email] {
 
 #email {
     height: 30px;
-    width: 30%;
+    width: 100%;
+    margin-left: 15px;
 }
 
-label[for=escolaridade], #escolaridade {
-    display: inline-block;
+label[for=escolaridade], #escolaridade1, #escolaridade2, #escolaridade3 {
+    display: inline;
+    float: left;
 }
 
 label[for=escolaridade] {
@@ -223,13 +239,15 @@ label[for=escolaridade] {
     padding-left: 15px;
 }
 
-#escolaridade {
+#escolaridade1, #escolaridade2, #escolaridade3 {
     height: 30px;
-    width: 30%;
+    width: 100%;
+    margin-left: 15px;
 }
 
-label[for=instituicao], #instituicao {
-    display: inline-block;
+label[for=instituicao], #instituicao1, #instituicao2, #instituicao3 {
+    display: inline;
+    float: left;
 }
 
 label[for=instituicao] {
@@ -239,9 +257,10 @@ label[for=instituicao] {
     padding-left: 15px;
 }
 
-#instituicao {
+#instituicao1, #instituicao2, #instituicao3 {
     height: 30px;
-    width: 45%;
+    width: 100%;
+    margin-left: 15px;
 }
 
 #mais_formacao {
@@ -251,8 +270,9 @@ label[for=instituicao] {
     background-color: transparent;
 }
 
-label[for=empresa], #empresa {
-    display: inline-block;
+label[for=empresa], #empresa1, #empresa2, #empresa3 {
+    display: inline;
+    float: left;
 }
 
 label[for=empresa] {
@@ -262,13 +282,15 @@ label[for=empresa] {
     padding-left: 15px;
 }
 
-#empresa {
+#empresa1, #empresa2, #empresa3 {
     height: 30px;
-    width: 30%;
+    width: 100%;
+    margin-left: 15px;
 }
 
-label[for=cargo], #cargo {
-    display: inline-block;
+label[for=cargo], #cargo1, #cargo2, #cargo3 {
+    display: inline;
+    float: left;
 }
 
 label[for=cargo] {
@@ -278,13 +300,15 @@ label[for=cargo] {
     padding-left: 15px;
 }
 
-#cargo {
+#cargo1, #cargo2, #cargo3 {
     height: 30px;
-    width: 20%;
+    width: 100%;
+    margin-left: 15px;
 }
 
-label[for=tempo], #tempo {
-    display: inline-block;
+label[for=tempo], #tempo1, #tempo2, #tempo3 {
+    display: inline;
+    float: left;
 }
 
 label[for=tempo] {
@@ -294,9 +318,28 @@ label[for=tempo] {
     padding-left: 15px;
 }
 
-#tempo {
+#tempo1, #tempo2, #tempo3 {
     height: 30px;
-    width: 15%;
+    width: 100%;
+    margin-left: 15px;
+}
+
+label[for=sobre_mim], #sobre_mim {
+    display: inline;
+    float: left;
+}
+
+label[for=sobre_mim] {
+    margin-bottom: 0px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+#sobre_mim {
+    height: 70px;
+    width: 100%;
+    margin-left: 15px;
 }
 
 #mais_experiencia {
@@ -304,4 +347,95 @@ label[for=tempo] {
     width: fit-content;
     cursor: pointer;
     background-color: transparent;
+}
+
+label[for=cep], #cep {
+    display: inline;
+    float: left;
+}
+
+label[for=cep] {
+    margin-bottom: 0px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+#cep {
+    height: 30px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+label[for=cidade], label[for=estado], #cidade, #estado {
+    display: inline;
+    float: left;
+}
+
+label[for=cidade], label[for=estado] {
+    margin-bottom: 0px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+#cidade, #estado {
+    height: 30px;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.form-input {
+    padding:3px;
+    background:#fff;
+}
+.form-input input {
+    display:none;
+}
+.form-input label {
+    display:block;
+    background:transparent;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.imgRemove{
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    outline: none;
+    height: fit-content;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-input img {
+    width:100px;
+    height: 100px;
+    background-size: cover;
+    border-radius:50% 50% 50% 50%;
+    width:200px;
+    height:200px;
+    margin-top: 20px;
+}
+
+label[for=img_one], label[for=file-ip-1], #cep, #file-ip-1 {
+    display: inline;
+    float: left;
+}
+
+#form_btn { 
+    border: 0px; 
+    background-color: rgb(205, 226, 248);
+    width: 200px; 
+    height: 40px; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 
+    rgba(0, 0, 0, 0.19); 
+    cursor: pointer;
+}
+
+#form_btn:hover {
+    background-color: rgb(47, 1, 248);
+    color: white;
 }

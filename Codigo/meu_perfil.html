@@ -14,12 +14,11 @@
         <title>Meu Perfil</title>
     </head>
     <body>
-
         <!--Cabecalho-->
-        <div class = "container-fluid" id = "cabecalho_container">
+        <div class = "container-fluid" id = "cabecalho_container" style="padding: 0px;">
             <!--Navbar com a logo e o menu dropdown-->
             <nav class = "navbar navbar-light" id = "navbar">
-                <a class = "navbar-brand" href = "#"><img src = "./logo.png" alt = "Logo"></a>
+                <a class = "navbar-brand" href = "#" style = "padding: 0px; margin: 0px;"><img src = "./logo.png" alt = "Logo"></a>
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="./index.html">Pagina Inicial</a>
@@ -41,37 +40,39 @@
                 <div class = "col-lg-4 col-xs-6 user-col">
                     <div class = "card user-card">
                         <div class = "card-header card-header-user">
-                            <i class="fa fa-user-circle-o"></i>
+                            <img id="user_img" src="./user.png" style = "height: 100px; width: auto;">
                             <p id = "dados-usuario"><b>Nome do Usuário</b></p>
-                            
                         </div>
                         <div class = "card-body card-body-user">
                             <ul id = "dados-lista">
                                 <li id = "dados-lista-item">
                                     <p id = "deOndeSou">De onde sou... <i class="fa fa-pencil"></i></p>
-                                    <input id = "addLocation" placeholder= "Insira sua cidade, estado e país" >
+                                    <input id = "addLocation" placeholder= "Insira sua cidade, estado e país" disabled >
                                 </li>
                                 <li id = "dados-lista-item">
                                     <p id = "minhaFormacao">Minha Formação... <i class="fa fa-pencil"></i></p>
-                                    <input id = "addF" placeholder= "Instituição onde terminou/cursa o Ensino Médio">
-                                    <input id = "addF" placeholder= "Instituição onde terminou/cursa o técnico">
-                                    <input id = "addF" placeholder= "Instituição onde terminou/cursa a graduação">
+                                    <input id = "addF1" placeholder= "Instituição onde terminou/cursa o Ensino Médio" disabled>
+                                    <input id = "addF2" placeholder= "Instituição onde terminou/cursa o técnico" disabled>
+                                    <input id = "addF3" placeholder= "Instituição onde terminou/cursa a graduação" disabled>
                                     <button type = "button" id = "addMore"><i class='fa fa-plus'></i> Adicionar mais formação</button>
                                 </li>
                                 <li id = "dados-lista-item">
                                     <p id = "minhaExperiencia">Minha Experiência... <i class="fa fa-pencil"></i></p>
-                                    <input id = "addF" placeholder= "Primeira empresa onde trabalhou">
-                                    <input id = "addF" placeholder= "Segunda empresa onde trabalhou">
+                                    <input id = "addE1" placeholder= "Primeira empresa onde trabalhou" disabled>
+                                    <input id = "addE2" placeholder= "Segunda empresa onde trabalhou" disabled>
                                     <button type = "button" id = "addMore"><i class='fa fa-plus'></i> Adicionar mais experiência</button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>  
-                <div class = "col-lg-8 col-xs-6 user-options-col">
+                <div class = "col-lg-8 col-xs-6 user-options-col" style="padding-left: 10px;padding-right: 10px;">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a href="#favoritos" class="nav-link active" data-toggle="tab">Vagas favoritas</a>
+                            <a href="#sobre_mim" class="nav-link active" data-toggle="tab">Sobre mim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#favoritos" class="nav-link" data-toggle="tab">Vagas favoritas</a>
                         </li>
                         <li class="nav-item">
                             <a href="#candidaturas" class="nav-link" data-toggle="tab">Minhas candidaturas</a>
@@ -81,7 +82,21 @@
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="favoritos">
+                        <div class="tab-pane fade show active" id="sobre_mim_tab">
+                            <div class = "container-fluid sobre-container">
+                                <div class = "row row-sobre">
+                                    <div class = "col-lg-12" style="margin-bottom: 15px;">
+                                        <label for = "sobre_mim" style="padding-left: 0px; font-size: 20px;">Biografia:</label>
+                                        <span class = "code">
+                                            <b>
+                                                <textarea id = "sobre_mim" style = "margin-left: 0px;" disabled></textarea>
+                                            </b>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="favoritos">
                             <div class = "container-fluid favoritos-container">
                                 <div class = "row favoritos-row">
                                     <div class = "col-lg-4 favoritos-col">
@@ -207,5 +222,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src = "./function.js"></script>
         <script src = "./funcoes_cadastro.js"></script>
+        <script>
+            window.addEventListener ( 'DOMContentLoaded', function (event) {
+                createCandidateAccount ( )
+            });
+        </script>
     </body>
 </html>
