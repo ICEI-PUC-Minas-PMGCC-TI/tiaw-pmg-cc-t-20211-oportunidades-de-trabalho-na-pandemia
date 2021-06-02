@@ -36,7 +36,7 @@ const registerCandidate = (ev) => {
     localStorage.setItem ( 'MyCandidateList', JSON.stringify (candidates) );
 }
 
-function createCandidateAccount () {
+/*function createCandidateAccount () {
     const candidates = JSON.parse (localStorage.getItem('MyCandidateList'));
     document.getElementById ( 'dados-usuario' ).innerHTML = `<b>${candidates.nome}</b>`;
     document.getElementById ( 'addF1' ).value = candidates.escolaridade1;
@@ -46,7 +46,7 @@ function createCandidateAccount () {
     document.getElementById ( 'addE2' ).value = candidates.empresa2;
     document.getElementById ( 'sobre_mim' ).value = candidates.sobre_mim;
     document.getElementById ( 'user_img' ).value = candidates.usuario;
-}
+}*/
 
 function showPreviewOne(event){
     if(event.target.files.length > 0){
