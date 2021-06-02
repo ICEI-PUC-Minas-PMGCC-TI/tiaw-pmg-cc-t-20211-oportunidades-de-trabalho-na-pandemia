@@ -50,15 +50,15 @@
                         <div class = "row" style="width: 100%;">
                             <div class="col-lg-6" style="margin-bottom: 15px;">
                                 <label for = "nome">Nome completo:</label><br>
-                                <input id = "nome" type = "text" name = "nome">
+                                <input id = "nome" type = "text" name = "nome" required>
                             </div>
                             <div class = "col-lg-3" style="margin-bottom: 15px;">
                                 <label for = "nascimento">Data de nascimento:</label><br>
-                                <input id = "nascimento" type = "date" name = "nascimento">
+                                <input id = "nascimento" type = "date" name = "nascimento" required>
                             </div>
                             <div class = "col-lg-3" style="margin-bottom: 15px;">
                                 <label for = "genero">Gênero:</label><br>
-                                <select id="genero" name="genero">
+                                <select id="genero" name="genero" required>
                                     <option>Selecione um gênero</option>
                                     <option>Masculino</option>
                                     <option>Feminino</option>
@@ -72,15 +72,15 @@
                         <div class = "row" style="width: 100%;">
                             <div class = "col-lg-6" style="margin-bottom: 15px;">
                                 <label for = "email">E-mail:</label><br>
-                                <input id = "email" type="email" name = "celular">
+                                <input id = "email" type="email" name = "celular" required>
                             </div>
                             <div class = "col-lg-3" style="margin-bottom: 15px;">
                                 <label for = "telefone">Telefone:</label><br>
-                                <input id = "telefone" type="text" name = "telefone">
+                                <input id = "telefone" type="text" name = "telefone" required>
                             </div>
                             <div class = "col-lg-3" style="margin-bottom: 15px;">
                                 <label for = "celular">Celular:</label><br>
-                                <input id = "celular" type="text" name = "celular">
+                                <input id = "celular" type="text" name = "celular" required>
                             </div>
                         </div>
 
@@ -88,7 +88,7 @@
                         <div class = "row" style="width: 100%;">
                             <div class = "col-lg-4" style="margin-bottom: 15px;">
                                 <label for = "escolaridade">Escolaridade:</label>
-                                <select id="escolaridade1" name="escolaridade">
+                                <select id="escolaridade1" name="escolaridade" required>
                                     <option>Selecione sua escolaridade</option>
                                     <option>Ensino Fundamental incompleto</option>
                                     <option>Ensino Fundamental completo</option>
@@ -100,7 +100,7 @@
                             </div>
                             <div class = "col-lg-8" style="margin-bottom: 15px;">
                                 <label for = "instituicao">Instituição:</label>
-                                <input id = "instituicao1" type="text" name = "instituicao">
+                                <input id = "instituicao1" type="text" name = "instituicao" required>
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@
                         <div class = "row" style="width: 100%;">
                             <div class = "col-lg-4" style="margin-bottom: 15px;">
                                 <label for = "escolaridade">Escolaridade:</label>
-                                <select id="escolaridade2" name="escolaridade">
+                                <select id="escolaridade2" name="escolaridade" required>
                                     <option>Selecione sua escolaridade</option>
                                     <option>Ensino Fundamental incompleto</option>
                                     <option>Ensino Fundamental completo</option>
@@ -120,7 +120,7 @@
                             </div>
                             <div class = "col-lg-8" style="margin-bottom: 15px;">
                                 <label for = "instituicao">Instituição:</label>
-                                <input id = "instituicao2" type="text" name = "instituicao">
+                                <input id = "instituicao2" type="text" name = "instituicao" required>
                             </div>
                         </div>
                         
@@ -128,7 +128,7 @@
                         <div class = "row" style="width: 100%;">
                             <div class = "col-lg-4" style="margin-bottom: 15px;">
                                 <label for = "escolaridade">Escolaridade:</label>
-                                <select id="escolaridade3" name="escolaridade">
+                                <select id="escolaridade3" name="escolaridade" required>
                                     <option>Selecione sua escolaridade</option>
                                     <option>Ensino Fundamental incompleto</option>
                                     <option>Ensino Fundamental completo</option>
@@ -140,7 +140,7 @@
                             </div>
                             <div class = "col-lg-8" style="margin-bottom: 15px;">
                                 <label for = "instituicao">Instituição:</label>
-                                <input id = "instituicao3" type="text" name = "instituicao">
+                                <input id = "instituicao3" type="text" name = "instituicao" required>
                             </div>
                         </div>
                         <div class = "row" style="width: 100%;">
@@ -230,7 +230,7 @@
 
                         <div class = "row" style = "width: 100%; margin-bottom: 40px; margin-top: 50px;">
                             <div class = "col-lg-12 ml-auto">
-                                <button type = "submit" id = "form_btn">Cadastrar</button>
+                                <button onclick="cadastrado()" type = "submit" id = "form_btn">Cadastrar</button>
                                 <script>
                                     document.addEventListener ( 'DOMContentLoaded', () => {
                                         document.getElementById ('form_btn').addEventListener('click', registerCandidate );

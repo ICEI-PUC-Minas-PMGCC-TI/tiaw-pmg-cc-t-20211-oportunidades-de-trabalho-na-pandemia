@@ -60,3 +60,7 @@ function showPreviewOne(event){
 function myImgRemoveFunctionOne() {
     document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
 }
+
+function cadastrado () {
+    location.href = "./cadastrado.html"; 
+ }

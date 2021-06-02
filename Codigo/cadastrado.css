@@ -1,0 +1,95 @@
+/* Geral */
+
+body {
+    overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+.line-break {
+    width: 100%;
+}
+
+/* Cabecalho */
+
+#cabecalho_container {
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(205, 226, 248);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a.navbar-brand img {
+    height: 56px;
+    width: auto;
+}
+
+/* The sidebar menu */
+.sidebar {
+    height: 450px; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: rgb(47, 1, 248); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+  
+  /* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: black;
+}
+  
+  /* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+  /* The button used to open the sidebar */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(205, 226, 248);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+  
+.openbtn:hover {
+    background-color: rgb(47, 1, 248);
+}
+
+.openbtn:focus {
+      outline-width: 0px;
+}
+
+a.closebtn {
+    color: white;
+}
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
