@@ -10,21 +10,38 @@ const registerCandidate = (ev) => {
         email              : document.getElementById ( 'email'         ).value,
         tel                : document.getElementById ( 'telefone'      ).value,
         cell               : document.getElementById ( 'celular'       ).value,
-        escolaridade1      : document.getElementById ( 'escolaridade1' ).value,
-        escolardade2       : document.getElementById ( 'escolaridade2' ).value,
-        escolaridade3      : document.getElementById ( 'escolaridade3' ).value,
-        instituicao1       : document.getElementById ( 'instituicao1'  ).value,
-        instituicao2       : document.getElementById ( 'instituicao2'  ).value,
-        instituicao3       : document.getElementById ( 'instituicao3'  ).value,
-        empresa1           : document.getElementById ( 'empresa1'      ).value,
-        empresa2           : document.getElementById ( 'empresa2'      ).value,
-        empresa3           : document.getElementById ( 'empresa3'      ).value,
-        cargo1             : document.getElementById ( 'cargo1'        ).value,
-        cargo2             : document.getElementById ( 'cargo2'        ).value,
-        cargo3             : document.getElementById ( 'cargo3'        ).value,
-        tempo1             : document.getElementById ( 'tempo1'        ).value,
-        tempo2             : document.getElementById ( 'tempo2'        ).value,
-        tempo3             : document.getElementById ( 'tempo3'        ).value,
+        formacao           : [
+            {
+                escolaridade1      : document.getElementById ( 'escolaridade1' ).value,
+                instituicao1       : document.getElementById ( 'instituicao1'  ).value,
+            },
+            {
+                escolardade2       : document.getElementById ( 'escolaridade2' ).value,
+                instituicao2       : document.getElementById ( 'instituicao2'  ).value,
+            },
+            {
+                escolaridade3      : document.getElementById ( 'escolaridade3' ).value,
+                instituicao3       : document.getElementById ( 'instituicao3'  ).value,
+
+            }
+        ],
+        experiencia       : [
+            {
+                empresa1           : document.getElementById ( 'empresa1'      ).value,
+                cargo1             : document.getElementById ( 'cargo1'        ).value,
+                tempo1             : document.getElementById ( 'tempo1'        ).value,
+            },
+            {
+                empresa2           : document.getElementById ( 'empresa2'      ).value,
+                cargo2             : document.getElementById ( 'cargo2'        ).value,
+                tempo2             : document.getElementById ( 'tempo2'        ).value,
+            },
+            {
+                empresa3           : document.getElementById ( 'empresa3'      ).value,
+                cargo3             : document.getElementById ( 'cargo3'        ).value,
+                tempo3             : document.getElementById ( 'tempo3'        ).value,
+            }
+        ],
         sobre_mim          : document.getElementById ( 'sobre_mim'     ).value,
         usuario            : document.getElementById ( 'file-ip-1'     ).value,
     }
