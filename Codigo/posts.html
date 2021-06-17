@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="forum.html">Forum</a></li>
+                    <li class="nav-item"><a href="posts.html">Posts</a></li>
+                    <li class="nav-item"><a href="detalhe.html">Detalhe</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">forum labore</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">duvidas</option>
+                    <option value="Titles">titulo</option>
+                    <option value="Descriptions">resposta</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="">Forum em geral - Forum labore</a> >> <a href="">Forum antigo</a></span>
+        </div>
+        <!--Display posts table-->
+        <div class="posts-table">
+            <div class="table-head">
+                <div class="status">atores</div>
+                <div class="subjects">subtitulos</div>
+                <div class="replies">Views</div>
+                <div class="last-reply">data</div>
+            </div>
+            <div class="table-row">
+               <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">Vale a pena investir em cursos ?</a>
+                    <br>
+                    <span>Vale muito a pena sim </span>
+                </div>
+                <div class="replies">
+                    <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                   02/11/2020
+                    <br>feito por <b><a href="">José</a></b>
+                </div>
+            </div>
+            <!--starts here-->
+            <div class="table-row">
+               <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">Uma pessoa sem experiencia pode ser contratrada?
+                    </a>
+                    <br>
+                    <span>sim, o mercado procura pessoas sem experiencia tambem para ser contratadas</span>
+                </div>
+                <div class="replies">
+                     <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    07/04/2021
+                    <br>feito por  <b><a href="">Carlos</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+               <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">tem cursos de graça aqui ? </a>
+                    <br>
+                    <span>Não</span>
+                </div>
+                <div class="replies">
+                    125 views
+                </div>
+
+                <div class="last-reply">
+                    05/12/2020
+                    <br>feito <b><a href="">rayssa</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">as empresas disponibilizam beneficios para seu empregados ? </a>
+                    <br>
+                    <span>isso depende de qual empresa quer te contratar</span>
+                </div>
+                <div class="replies">
+                <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    27/08/2020
+                    <br>feito por <b><a href="">lucas</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">tem vagas para pessoas com deficiencia ?</a>
+                    <br>
+                    <span>sim, temos um setor so para essas vagas</span>
+                </div>
+                <div class="replies">
+                  <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                     13/01/2021
+                    <br>feito <b><a href="">gabriel</a></b>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">tem alguma vaga de estagio ?</a>
+                    <br>
+                    <span>Sim temos</span>
+                </div>
+                <div class="replies">
+                    <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    04/05/2021
+                    <br>feito por <b><a href="">Rafael</a></b>
+                </div>
+            </div>
+
+
+            <div class="table-row">
+               <img src="usuario.png" width="50" height="50">
+                <div class="subjects">
+                    <a href="">Tem vagas para menor aprediz ?</a>
+                    <br>
+                    <span>Sim</span>
+                </div>
+                <div class="replies">
+                    <br> 125 views
+                </div>
+
+                <div class="last-reply">
+                    03/02/2021
+                    <br>feito por <b><a href="">marilene</a></b>
+                </div>
+            </div>
+
+
+      
+
+
+    <footer>
+        <span>&copy;  copyright labore</span>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

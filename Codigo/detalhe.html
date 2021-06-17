@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--NavBar Section-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="forum.html">Forums</a></li>
+                    <li class="nav-item"><a href="posts.html">Posts</a></li>
+                    <li class="nav-item"><a href="detalhe.html">Detail</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">Forum labore</div>
+        </div>
+        <!--SearchBox Section-->
+        <div class="search-box">
+            <div>
+                <select name="" id="">
+                    <option value="Everything">duvidas</option>
+                    <option value="Titles">titulos</option>
+                    <option value="Descriptions">resposta</option>
+                </select>
+                <input type="text" name="q" placeholder="search ...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    <div class="container">
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="">Meu forum - Forums</a> >> <a href="">Sub forum</a> >> <a href="">topicos</a></span>
+        </div>
+
+        <!--Topic Section-->
+        <div class="topic-container">
+            <!--Original thread-->
+            <div class="head">
+                <div class="authors">Autor</div>
+                
+            </div>
+
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Autor</a></div>
+                
+                    <img src="usuario.png" width="50" height="50">
+                 
+                </div>
+                <div class="content">
+                    
+                    <div class="comment">
+                        <button onclick="showComment()">Commentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Comment Area-->
+        <div class="comment-area hide" id="comment-area">
+            <form>
+                <textarea name="comment" id="comentario" placeholder="comment here ... "></textarea>
+                <button type="submit" value="submit" id = "submit_comentario">Postar</button>
+            </form>
+        </div>
+
+        <!--Comments Section-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Autor</a></div>
+                   
+                     <img src="usuario.png" width="50" height="50">
+                   
+                </div>
+                <div class="content">
+                    
+                    <br>
+                    <div class="comment">
+                        <button onclick="showReply()">comentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <form>
+                <textarea name="reply" id="resposta" placeholder="reply here ... "></textarea>
+                <button type="submit" value="submit" id = "submit_resposta">Postar</button>
+            </form>
+        </div>
+
+
+        <!--Another Comment With replies-->
+        <div class="comments-container">
+            <div class="body">
+                <div class="authors">
+                    <div class="username"><a href="">Autor</a></div>
+                    <div></div>
+                     <img src="usuario.png" width="50" height="50">
+                    
+                </div>
+                <div class="content">
+                   
+                   
+                    <div class="comment">
+                        <button onclick="showReply()">comentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reply Area-->
+        <div class="comment-area hide" id="reply-area">
+            <textarea name="reply" id="resposta" placeholder="reply here ... "></textarea>
+            <input type="submit" value="submit">
+        </div>
+        
+
+        
+
+    </div>
+    <footer>
+        <span>&copy;  copyright labore</span>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener ( 'DOMContentLoaded', () => {
+            document.getElementById ('submit_comentario').addEventListener('click', registerComentarios );
+        });
+    </script>
+</body>
+</html>
