@@ -13,6 +13,11 @@ ul {
     width: 100%;
 }
 
+.required
+{
+    color: red;
+}
+
 /* Cabecalho */
 
 #cabecalho_container {

@@ -41,32 +41,31 @@
                 <li>Passo 2</li>
                 <li>Passo 3</li>
               </ul>
-              <form class="form-wrapper">
+              <form class="form-wrapper" id = "formulario_vaga">
                 <fieldset class="section is-active">
                   <h3>Dados básicos da vaga</h3>
-                  <input type="text" name="name" id="name" placeholder="Nome da vaga">
-                  <input type="text" name="empresa" id="empresa" placeholder="Nome da empresa">
-                  <input type="text" name="cidade" id="cidade" placeholder="Cidade onde a vaga é oferecida">
-                  <input type="text" name="estado" id="estado" placeholder="Estado onde a vaga é oferecida">
+                  <input type="text" name="name" id="name" placeholder="Nome da vaga (obrigatório)">
+                  <input type="text" name="empresa" id="empresa" placeholder="Nome da empresa (obrigatório)" >
+                  <input type="text" name="cidade" id="cidade" placeholder="Cidade onde a vaga é oferecida (obrigatório)" >
+                  <input type="text" name="estado" id="estado" placeholder="Estado onde a vaga é oferecida (obrigatório)" >
                   <div class="button" style = "margin-top: 50px;">Próximo</div>
                 </fieldset>
                 <fieldset class="section">
                   <h3>Dados da vaga</h3>
-                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: não requer experiência, meio horário, homeoffice, etc.</i></label>
-                  <input type="text" name="tags" id="caracteristicas" placeholder="Características" style="margin-top: 0px;">
-                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: vale-transporte, vale-refeição, plano odontológico, etc.</i></label>
-                  <input type="text" name="tags" id="beneficios" placeholder="Benefícios" style="margin-top: 0px;">
-                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: graduação em administração, experiência, etc.</i></label>
-                  <input type="text" name="tags" id="requisitos" placeholder="Requisitos" style="margin-top: 0px;">
-                  <label for ="tags" style="font-size: 10px;"><i>Insira o valor do salário oferecido</i></label>
+                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: não requer experiência, meio horário, homeoffice, etc.</i><span class="required">*</span></label>
+                  <input type="text" name="tags" id="caracteristicas" placeholder="Características" style="margin-top: 0px;" >
+                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: vale-transporte, vale-refeição, plano odontológico, etc.</i><span class="required">*</span></label>
+                  <input type="text" name="tags" id="beneficios" placeholder="Benefícios" style="margin-top: 0px;" >
+                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: graduação em administração, experiência, etc.</i><span class="required">*</span></label>
+                  <input type="text" name="tags" id="requisitos" placeholder="Requisitos" style="margin-top: 0px;" >
+                  <label for ="tags" style="font-size: 10px;"><i>Insira o valor do salário oferecido</i><span class="required">*</span></label>
                   <input type="number" name="tags" id="salario" placeholder="R$1.000,00" style="margin-top: 0px;">
                   <h6><i> </i></h6>
                   <div class="button" style = "margin-top: 50px;">Próximo</div>
                 </fieldset>
                 <fieldset class="section">
                     <h3>Descrição da vaga</h3>
-                    <textarea name = "bio" class = "field-style" placeholder="Descreva a vaga em poucas palavras" id = "descricao"></textarea>
-                    <!--<div class="button" style = "margin-top: 50px;">Próximo</div>-->
+                    <textarea name = "bio" class = "field-style" placeholder="Descreva a vaga em poucas palavras (obrigatório)" id = "descricao" ></textarea>
                     <input class="submit button" type="submit" value="Registrar" id = "register_btn" style = "margin-top: 50px;">
                 </fieldset>
                 <fieldset class="section">
