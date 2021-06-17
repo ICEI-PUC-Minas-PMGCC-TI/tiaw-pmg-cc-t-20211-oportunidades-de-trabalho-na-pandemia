@@ -34,60 +34,69 @@
             </nav>
         </div>
 
-        <div class="container container-register">
-            <div class="wrapper">
-              <ul class="steps">
-                <li class="is-active">Passo 1</li>
-                <li>Passo 2</li>
-                <li>Passo 3</li>
-              </ul>
-              <form class="form-wrapper" id = "formulario_vaga">
-                <fieldset class="section is-active">
-                  <h3>Dados básicos da vaga</h3>
-                  <input type="text" name="name" id="name" placeholder="Nome da vaga (obrigatório)">
-                  <input type="text" name="empresa" id="empresa" placeholder="Nome da empresa (obrigatório)" >
-                  <input type="text" name="cidade" id="cidade" placeholder="Cidade onde a vaga é oferecida (obrigatório)" >
-                  <input type="text" name="estado" id="estado" placeholder="Estado onde a vaga é oferecida (obrigatório)" >
-                  <div class="button" style = "margin-top: 50px;">Próximo</div>
-                </fieldset>
-                <fieldset class="section">
-                  <h3>Dados da vaga</h3>
-                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: não requer experiência, meio horário, homeoffice, etc.</i><span class="required">*</span></label>
-                  <input type="text" name="tags" id="caracteristicas" placeholder="Características" style="margin-top: 0px;" >
-                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: vale-transporte, vale-refeição, plano odontológico, etc.</i><span class="required">*</span></label>
-                  <input type="text" name="tags" id="beneficios" placeholder="Benefícios" style="margin-top: 0px;" >
-                  <label for ="tags" style="font-size: 10px;"><i>Exemplo: graduação em administração, experiência, etc.</i><span class="required">*</span></label>
-                  <input type="text" name="tags" id="requisitos" placeholder="Requisitos" style="margin-top: 0px;" >
-                  <label for ="tags" style="font-size: 10px;"><i>Insira o valor do salário oferecido</i><span class="required">*</span></label>
-                  <input type="number" name="tags" id="salario" placeholder="R$1.000,00" style="margin-top: 0px;">
-                  <h6><i> </i></h6>
-                  <div class="button" style = "margin-top: 50px;">Próximo</div>
-                </fieldset>
-                <fieldset class="section">
-                    <h3>Descrição da vaga</h3>
-                    <textarea name = "bio" class = "field-style" placeholder="Descreva a vaga em poucas palavras (obrigatório)" id = "descricao" ></textarea>
-                    <input class="submit button" type="submit" value="Registrar" id = "register_btn" style = "margin-top: 50px;">
-                </fieldset>
-                <fieldset class="section">
-                  <h3>Vaga registrada!</h3>
-                  <p>A vaga foi registrada com sucesso.</p>
-                  <div class="button">Registrar mais vagas</div>
-                </fieldset>
-                <script>
-                    document.addEventListener ( 'DOMContentLoaded', () => {
-                        document.getElementById ('register_btn').addEventListener('click', registerVaga );
-                    });
-                </script>
-              </form>
-            </div>
-        </div>
+        <div class="container mt-5">
+          <div class="row d-flex justify-content-center align-items-center">
+              <div class="col-md-8">
+                  <form id="regForm">
+                      <h1 id="register">Registro de Vagas</h1>
+                      <div class="all-steps" id="all-steps"> 
+                        <span class="step"><i class="fa fa-user"></i></span> 
+                        <span class="step"><i class="fa fa-map-marker"></i></span> 
+                        <span class="step"><i class="fa fa-pencil-square-o"></i></span> 
+                        <span class="step"><i class="fa fa-address-book"></i></span>  
+                      </div>
+                      <div class="tab">
+                          <h6>Nome da vaga<span class = "required">*</span></h6>
+                          <p> <input id="name" oninput="this.className = ''" name="name"></p>
+                          <h6>Nome da empresa<span class = "required">*</span></h6>
+                          <p> <input id="empresa" oninput="this.className = ''" name="empresa"></p>
+                      </div>
+                      <div class="tab">
+                          <h6>Cidade onde a vaga é oferecida<span class = "required">*</span></h6>
+                          <p><input id="cidade" oninput="this.className = ''" name="cidade"></p>
+                          <h6>Estado onde a vaga é oferecida<span class = "required">*</span></h6>
+                          <p><input id="estado" oninput="this.className = ''" name="estado"></p>
+                      </div>
+                      <div class="tab">
+                          <h6>Características da vaga<span class = "required">*</span></h6>
+                          <h6><i>Exemplo: não requer experiência, meio horário, homeoffice, etc.</i></h6>
+                          <p><input id="caracteristicas" oninput="this.className = ''" name="caracteristicas"></p>
+                          <h6>Benefícios da vaga<span class = "required">*</span></h6>
+                          <h6><i>Exemplo: vale-transporte, vale-refeição, plano odontológico, etc.</i></h6>
+                          <p><input id="beneficios" oninput="this.className = ''" name="beneficios"></p>
+                          <h6>Requisitos da vaga<span class = "required">*</span></h6>
+                          <h6><i>Exemplo: graduação em administração, experiência, etc.</i></h6>
+                          <p><input id="requisitos" oninput="this.className = ''" name="requisitos"></p>
+                          <h6>Salário da vaga<span class = "required">*</span></h6>
+                          <h6><i>Insira o valor sem vírgulas ou pontos.</i></h6>
+                          <p><input id="salario" oninput="this.className = ''" name="salario"></p>
+                      </div>
+                      <div class="tab">
+                          <h6>Descrição da vaga<span class = "required">*</span></h6>
+                          <p><textarea name = "bio" class = "field-style" id = "descricao" ></textarea></p>
+                      </div>
+                      <script>
+                        document.addEventListener ( 'DOMContentLoaded', () => {
+                            document.getElementById ('descricao').addEventListener("change", registerVaga );
+                        });
+                    </script>
+                      <div class="thanks-message text-center" id="text-message">
+                        <h3>Vaga registrada com sucesso!</h3> <span>Para registrar mais vagas, clique <a href="./cadastro_vaga.html">aqui</a>.</span>
+                      </div>
+                      <div style="overflow:auto;" id="nextprevious">
+                        <div style="float:right;"> <button type="button" id="prevBtn" onclick="nextPrev(-1)"><i class="fa fa-angle-double-left"></i></button> <button type="button" id="nextBtn" onclick="nextPrev(1)"><i class="fa fa-angle-double-right"></i></button> </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
 
-        <!-- jQuery and JS bundle w/ Popper.js -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src = "./function.js"></script>
-        <script src = "./cadastro_vaga.js"></script>
+      <!-- jQuery and JS bundle w/ Popper.js -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src = "./function.js"></script>
+      <script src = "./cadastro_vaga.js"></script>
     </body>
 
 </html>
