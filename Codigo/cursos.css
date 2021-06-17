@@ -165,3 +165,9 @@ i.fa-angle-double-down {
 .cursos-col {
     padding-bottom: 50px;
 }
+
+#cursos {
+    font-family: "arial", "verdana", "sans-serif";
+    text-align: center
+ 
+}
