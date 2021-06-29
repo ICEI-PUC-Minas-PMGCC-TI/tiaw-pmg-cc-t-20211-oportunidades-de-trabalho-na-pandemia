@@ -422,23 +422,58 @@ i.fa-angle-double-down {
 
 /* Carousel de vagas */
 
-#carousel-vagas-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 0px;
-    padding-left: 0px;
+
+#vaga .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.carousel-indicators li {
-    visibility: hidden;
+.empresa-detalhes span {
+    font-weight: 300;
+    font-size: 13px
 }
 
-#carousel-vagas {
-    height: fit-content;
+#vaga .icon img {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 39px;
+    margin-right: 20px;
 }
 
-#vaga {
-    padding-bottom: 40px;
+.categoria span {
+    background-color: #fffbec;
+    width: 60px;
+    height: 25px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    display: flex;
+    color: #0008fa;
+    justify-content: center;
+    align-items: center
+}
+
+.progress {
+    height: 10px;
+    border-radius: 10px
+}
+
+.progress div {
+    background-color: red
+}
+
+.text1 {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.text2 {
+    color: #a5aec0
 }
 
 /*Seção sobre nós */
@@ -533,3 +568,4 @@ i.fa-whatsapp {
     padding-right: 40px;
     padding-left: 40px;
 }
+

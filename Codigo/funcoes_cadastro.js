@@ -1,83 +1,84 @@
+var currentTab = 0;
+document.addEventListener("DOMContentLoaded", function(event) {
+  showTab(currentTab);
+});
+
+function showTab(n) {
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } 
+  else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
+  } 
+  else {
+    document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
+  }
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  var x = document.getElementsByClassName("tab");
+  if (n == 1 && !validateForm()) 
+    return false;
+  x[currentTab].style.display = "none";
+  currentTab = currentTab + n;
+  if (currentTab >= x.length) {
+    document.getElementById("nextprevious").style.display = "none";
+    document.getElementById("all-steps").style.display = "none";
+    document.getElementById("register").style.display = "none";
+    document.getElementById("text-message").style.display = "block";
+  }
+  showTab(currentTab);
+}
+
+function validateForm() {
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  for (i = 0; i < y.length; i++) { 
+    if (y[i].value=="" ) { 
+      y[i].className +=" invalid" ; valid=false; 
+    }
+  } 
+  if (valid) { 
+    document.getElementsByClassName("step")[currentTab].className +=" finish" ; 
+  } 
+  return valid; 
+} 
+
+function fixStepIndicator(n) { 
+  var i, x=document.getElementsByClassName("step"); 
+  for (i=0; i < x.length; i++) { 
+    x[i].className=x[i].className.replace(" active", "" ); 
+  } 
+  x[n].className +=" active" ; 
+}
+
 let candidates = [];
 
 const registerCandidate = (ev) => {
     ev.preventDefault ( );
     let candidate = {
         id: Date.now (),
-        nome               : document.getElementById ( 'nome'          ).value,
-        data_de_aniversario: document.getElementById ( 'nascimento'    ).value,
+        nome               : document.getElementById ( 'name'          ).value,
+        data_de_nascimento: document.getElementById ( 'nascimento'    ).value,
         genero             : document.getElementById ( 'genero'        ).value,
         email              : document.getElementById ( 'email'         ).value,
         tel                : document.getElementById ( 'telefone'      ).value,
         cell               : document.getElementById ( 'celular'       ).value,
-        formacao           : [
-            {
-                escolaridade1      : document.getElementById ( 'escolaridade1' ).value,
-                instituicao1       : document.getElementById ( 'instituicao1'  ).value,
-            },
-            {
-                escolardade2       : document.getElementById ( 'escolaridade2' ).value,
-                instituicao2       : document.getElementById ( 'instituicao2'  ).value,
-            },
-            {
-                escolaridade3      : document.getElementById ( 'escolaridade3' ).value,
-                instituicao3       : document.getElementById ( 'instituicao3'  ).value,
-
-            }
-        ],
-        experiencia       : [
-            {
-                empresa1           : document.getElementById ( 'empresa1'      ).value,
-                cargo1             : document.getElementById ( 'cargo1'        ).value,
-                tempo1             : document.getElementById ( 'tempo1'        ).value,
-            },
-            {
-                empresa2           : document.getElementById ( 'empresa2'      ).value,
-                cargo2             : document.getElementById ( 'cargo2'        ).value,
-                tempo2             : document.getElementById ( 'tempo2'        ).value,
-            },
-            {
-                empresa3           : document.getElementById ( 'empresa3'      ).value,
-                cargo3             : document.getElementById ( 'cargo3'        ).value,
-                tempo3             : document.getElementById ( 'tempo3'        ).value,
-            }
-        ],
-        sobre_mim          : document.getElementById ( 'sobre_mim'     ).value,
-        usuario            : document.getElementById ( 'file-ip-1'     ).value,
+        formacao           : document.getElementById ( 'escolaridade'       ).value,
+        area_atuacao       : document.getElementById ( 'atuacao'       ).value,
+        sobre_mim          : document.getElementById ( 'descricao'     ).value,
     }
     candidates.push(candidate);
     document.forms[0].reset();
 
     console.warn ( 'Candidatos' , {candidates} );
 
-    localStorage.setItem ( 'MyCandidateList', JSON.stringify (candidates) );
+    localStorage.setItem ( 'CandidatosRegistrados', JSON.stringify (candidates) );
 }
-
-/*function createCandidateAccount () {
-    const candidates = JSON.parse (localStorage.getItem('MyCandidateList'));
-    document.getElementById ( 'dados-usuario' ).innerHTML = `<b>${candidates.nome}</b>`;
-    document.getElementById ( 'addF1' ).value = candidates.escolaridade1;
-    document.getElementById ( 'addF1' ).value = candidates.escolaridade2;
-    document.getElementById ( 'addF1' ).value = candidates.escolaridade3;
-    document.getElementById ( 'addE1' ).value = candidates.empresa1;
-    document.getElementById ( 'addE2' ).value = candidates.empresa2;
-    document.getElementById ( 'sobre_mim' ).value = candidates.sobre_mim;
-    document.getElementById ( 'user_img' ).value = candidates.usuario;
-}*/
-
-function showPreviewOne(event){
-    if(event.target.files.length > 0){
-        let src = URL.createObjectURL(event.target.files[0]);
-        let preview = document.getElementById("file-ip-1-preview");
-        preview.src = src;
-        preview.style.display = "block";
-    } 
-}
-
-function myImgRemoveFunctionOne() {
-    document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
-}
-
-function cadastrado () {
-    location.href = "./cadastrado.html"; 
- }

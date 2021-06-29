@@ -59,27 +59,24 @@ function fixStepIndicator(n) {
   x[n].className +=" active" ; 
 }
 
-let vagas = [];
+let companies = [];
 
-const registerVaga = (ev) => {
+const registerCompany = (ev) => {
     ev.preventDefault ( );
-    let vaga = {
+    let company = {
         id: Date.now (),
-        nome_vaga                         : document.getElementById ( 'name'           ).value,
-        nome_empresa                      : document.getElementById ( 'empresa'        ).value,
-        cidade_empresa                    : document.getElementById ( 'cidade'         ).value,
-        estado_empresa                    : document.getElementById ( 'estado'         ).value,
-        vaga_caracteristicas              : document.getElementById ( 'caracteristicas').value,
-        vaga_beneficios                   : document.getElementById ( 'beneficios'     ).value,
-        vaga_requisitos                   : document.getElementById ( 'requisitos'     ).value,
-        vaga_salario                      : document.getElementById ( 'salario'        ).value,
-        vaga_descricao                    : document.getElementById ( 'descricao'      ).value,
+        nome               : document.getElementById ( 'name'          ).value,
+        cnpj: document.getElementById ( 'cnpj'    ).value,
+        ramo_atividade             : document.getElementById ( 'ramo'        ).value,
+        email              : document.getElementById ( 'email'         ).value,
+        tel                : document.getElementById ( 'telefone'      ).value,
+        cell               : document.getElementById ( 'celular'       ).value,
+        sobre_empresa          : document.getElementById ( 'descricao'     ).value,
     }
-    vagas.push(vaga);
+    companies.push(company);
     document.forms[0].reset();
 
-    console.warn ( 'Vagas' , {vagas} );
+    console.warn ( 'Empresas' , {companies} );
 
-    localStorage.setItem ( 'VagasRegistradas', JSON.stringify (vagas) );
-  }
-
+    localStorage.setItem ( 'EmpresassRegistradas', JSON.stringify (companies) );
+}

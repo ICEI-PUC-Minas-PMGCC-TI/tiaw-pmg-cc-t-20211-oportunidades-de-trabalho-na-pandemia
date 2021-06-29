@@ -13,6 +13,11 @@ ul {
     width: 100%;
 }
 
+.required
+{
+    color: red;
+}
+
 /* Cabecalho */
 
 #cabecalho_container {
@@ -96,346 +101,109 @@ a.closebtn {
 
 /* Formulario */
 
-.container-cadastro {
-    padding-top: 40px;
-    text-align: center;
+#regForm {
+    background-color: #ffffff;
+    margin: 0px auto;
+    font-family: Raleway;
+    padding: 40px;
+    border-radius: 10px
+  }
+  
+  #register {
+    color: #000
+  }
+  
+  h1 {
+    text-align: center
+  }
+  
+  input, textarea, select {
+    padding: 10px;
     width: 100%;
-    height: fit-content;
-}
-
-form {
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-form::after {
-    content: '';
-    width: 100%;
-}
-
-form:last-child {
-    order: 1;
-}
-
-label[for=nome], #nome {
-    display: inline;
-    float: left;
-}
-
-label[for=nome] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#nome {
-    width: 100%;
-    height: 30px;
-    margin-left: 15px;
-}
-
-label[for=nascimento], #nascimento {
-    display: inline;
-    float: left;
-}
-
-label[for=nascimento] {
-    margin-bottom: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-}
-
-#nascimento {
-    width: 100%;
-    height: 30px;
-    margin-left: 15px;
-}
-
-label[for=genero] {
-    margin-bottom: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-}
-
-label[for=genero], #genero {
-    display: inline;
-    float: left;
-}
-
-#genero {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=telefone], #telefone {
-    display: inline;
-    float: left;
-}
-
-label[for=telefone] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#telefone {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=celular], #celular {
-    display: inline;
-    float: left;
-}
-
-label[for=celular] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#celular {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=email], #email {
-    display: inline;
-    float: left;
-}
-
-label[for=email] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#email {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=escolaridade], #escolaridade1, #escolaridade2, #escolaridade3 {
-    display: inline;
-    float: left;
-}
-
-label[for=escolaridade] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#escolaridade1, #escolaridade2, #escolaridade3 {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=instituicao], #instituicao1, #instituicao2, #instituicao3 {
-    display: inline;
-    float: left;
-}
-
-label[for=instituicao] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#instituicao1, #instituicao2, #instituicao3 {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-#mais_formacao {
-    border: 0px;
-    width: fit-content;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-label[for=empresa], #empresa1, #empresa2, #empresa3 {
-    display: inline;
-    float: left;
-}
-
-label[for=empresa] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#empresa1, #empresa2, #empresa3 {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=cargo], #cargo1, #cargo2, #cargo3 {
-    display: inline;
-    float: left;
-}
-
-label[for=cargo] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#cargo1, #cargo2, #cargo3 {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=tempo], #tempo1, #tempo2, #tempo3 {
-    display: inline;
-    float: left;
-}
-
-label[for=tempo] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#tempo1, #tempo2, #tempo3 {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=sobre_mim], #sobre_mim {
-    display: inline;
-    float: left;
-}
-
-label[for=sobre_mim] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#sobre_mim {
-    height: 70px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-#mais_experiencia {
-    border: 0px;
-    width: fit-content;
-    cursor: pointer;
-    background-color: transparent;
-}
-
-label[for=cep], #cep {
-    display: inline;
-    float: left;
-}
-
-label[for=cep] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#cep {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-label[for=cidade], label[for=estado], #cidade, #estado {
-    display: inline;
-    float: left;
-}
-
-label[for=cidade], label[for=estado] {
-    margin-bottom: 0px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-}
-
-#cidade, #estado {
-    height: 30px;
-    width: 100%;
-    margin-left: 15px;
-}
-
-.form-input {
-    padding:3px;
-    background:#fff;
-}
-.form-input input {
-    display:none;
-}
-.form-input label {
-    display:block;
-    background:transparent;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-.imgRemove{
-    background-color: transparent;
-    border: 1px solid #000;
-    border-radius: 5px;
-    outline: none;
-    height: fit-content;
-    align-items: center;
-    cursor: pointer;
-}
-
-.form-input img {
-    width:100px;
-    height: 100px;
-    background-size: cover;
-    border-radius:50% 50% 50% 50%;
-    width:200px;
-    height:200px;
-    margin-top: 20px;
-}
-
-label[for=img_one], label[for=file-ip-1], #cep, #file-ip-1 {
-    display: inline;
-    float: left;
-}
-
-#form_btn { 
-    border: 0px; 
-    background-color: rgb(205, 226, 248);
-    width: 200px; 
-    height: 40px; 
-    border-radius: 10px; 
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 
-    rgba(0, 0, 0, 0.19); 
-    cursor: pointer;
-}
-
-#form_btn:hover {
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    -webkit-appearance: none
+  }
+  
+  .tab input:focus, .tab textarea:focus, .tab select:focus  {
+    border: 1px solid rgb(47, 1, 248) !important;
+    outline: none
+  }
+  
+  input.invalid, textarea.invalid, select.invalid {
+    border: 1px solid #e03a0666
+  }
+  
+  .tab {
+    display: none
+  }
+  
+  button {
     background-color: rgb(47, 1, 248);
-    color: white;
-}
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer
+  }
+  
+  button:hover {
+    opacity: 0.8
+  }
+  
+  button:focus {
+    outline: none !important
+  }
+  
+  #prevBtn {
+    background-color: #bbbbbb
+  }
+  
+  .all-steps {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center
+  }
+  
+  .step {
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(47, 1, 248);
+    opacity: 0.5
+  }
+  
+  .step.active {
+    opacity: 1
+  }
+  
+  .step.finish {
+    color: #fff;
+    background: rgb(47, 1, 248);
+    opacity: 1
+  }
+  
+  .all-steps {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px
+  }
+  
+  .thanks-message {
+    display: none
+  }
+

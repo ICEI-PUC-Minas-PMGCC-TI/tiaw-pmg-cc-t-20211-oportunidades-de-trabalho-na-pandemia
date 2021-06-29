@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name= "viewport" content= "width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"  type='text/css'>
+        <link rel="stylesheet" href= "./cadastro_empresa.css">
+
+        <title>Cadastre-se!</title>
+    </head>
+    <body>
+
+        <!--Cabecalho-->
+        <div class = "container-fluid" id = "cabecalho_container">
+            <!--Navbar com a logo e o menu dropdown-->
+            <nav class = "navbar navbar-light" id = "navbar">
+                <a class = "navbar-brand" href = "#"><img src = "./logo.png" alt = "Logo"></a>
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="./index.html">Pagina Inicial</a>
+                    <a href="./meu_perfil.html">Meu Perfil</a>
+                    <a href="./cursos.html">Cursos</a>
+                    <a href="./categorias.html">Categoria de vagas</a>
+                    <a href="./testes_vocacionais.html">Testes vocacionais</a>
+                    <a href="./forum.html">Fórum</a>
+                </div>
+                <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776;</button>
+                </div>
+            </nav>
+        </div>
+
+        <!--Formulario-->
+        <div class="container mt-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <form id="regForm">
+                        <h1 id="register">Cadastro de Empresas</h1>
+                        <div class="all-steps" id="all-steps"> 
+                          <span class="step"><i class="fa fa-building"></i></span> 
+                          <span class="step"><i class="fa fa-map-marker"></i></span> 
+                          <span class="step"><i class="fa fa-phone"></i></span>   
+                          <span class="step"><i class="fa fa-pencil"></i></span> 
+                          <span class="step"><i class="fa fa-check-circle"></i></span> 
+                        </div>
+                        <div class="tab">
+                            <h6>Nome da empresa<span class = "required">*</span></h6>
+                            <p> <input id="name" oninput="this.className = ''" name="name"></p>
+                            <h6>CNPJ:<span class = "required">*</span></h6>
+                            <p> <input id = "cnpj" oninput="this.className = ''" type = "text" name = "cnpj"></p>
+                            <h6>Ramo de atividade:<span class = "required">*</span></h6>
+                            <p> <input id = "ramo" oninput="this.className = ''" type = "text" name = "ramo"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>Estado onde a empresa está localizada<span class = "required">*</span></h6>
+                            <p><input id="cidade" oninput="this.className = ''" name="estado"></p>
+                            <h6>Cidade onde a empresa está localizada<span class = "required">*</span></h6>
+                            <p><input id="estado" oninput="this.className = ''" name="cidade"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>E-mail:<span class = "required">*</span></h6>
+                            <p><input id="email" oninput="this.className = ''" name="email"></p>
+                            <h6>Whatsapp:</h6>
+                            <p><input id="celular" oninput="this.className = ''" name="celular"></p>
+                            <h6>Telefone</h6>
+                            <p><input id="telefone" oninput="this.className = ''" name="telefone"></p>
+                        </div>
+                        <div class="tab">
+                            <h6>Sobre a Empresa:<span class = "required">*</span></h6>
+                            <p><textarea name = "descricao" class = "field-style" id = "descricao" ></textarea></p>
+                        </div>
+                        <script>
+                          document.addEventListener ( 'DOMContentLoaded', () => {
+                              document.getElementById ('descricao').addEventListener("change", registerCompany );
+                          });
+                        </script>
+                        <div class="thanks-message text-center" id="text-message">
+                          <h3>Empresa registrada com sucesso!</h3> <span>Para registrar mais empresas, clique <a href="./cadastro_empresa.html">aqui</a>.</span>
+                        </div>
+                        <div style="overflow:auto;" id="nextprevious">
+                            <div style="float:right;"> 
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </button> 
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)"><i class="fa fa-angle-double-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src = "./function.js"></script>
+        <script src = "./cadastro_empresa.js"></script>
+    </body>
+</html>

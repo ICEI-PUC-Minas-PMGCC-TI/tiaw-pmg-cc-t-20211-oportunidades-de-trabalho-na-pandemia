@@ -45,6 +45,7 @@
                     <div class = "col-md-8 mx-auto" id = "caixa-pesquisa-col">
                         <form class = "search">
                             <input type = "text" placeholder= "Digite um cargo, uma empresa e/ou uma região" id = "pesquisa-vagas">
+                            <!-- <button type="submit" id = "pesquisar">Pesquisar</button> -->
                         </form>
                     </div>
                 </div>
@@ -71,249 +72,309 @@
             </div>
         </div>
 
-        <!--Seção de cadastros-->
-        <div class = "container" id = "convite-cadastro">
-            <div class = "row">
-                <div class = "col-md-8 mx-auto" id = "convite-cadastro-col">
-                    <h2>Deseja se cadastrar?</h3>
+        <div class = "container" id = "corpo">
+            <!--Seção de cadastros-->
+            <div class = "container" id = "convite-cadastro">
+                <div class = "row">
+                    <div class = "col-md-8 mx-auto" id = "convite-cadastro-col">
+                        <h2>Deseja se cadastrar?</h3>
+                    </div>
+                </div>
+                <div class = "row" id = "cadastro-row">
+                    <div class = "col-lg-6" id = "cadastro-btns" style="display: flex; justify-content: center; align-items: center;">
+                        <button type = "button" class = "empresa" onclick="cadastrar_empresa()" style="width: 100%;">Como empresa</button>
+                    </div>
+                    <div class = "col-lg-6" id = "cadastro-btns">
+                        <button type = "button" class = "candidato" onclick="cadastrar_candidato()" style="width: 100%; margin-left: 0px;">Como candidato</button>
+                    </div>
+                <script>
+                    function cadastrar_candidato () {
+                    location.href = "./cadastro_candidato.html"; 
+                    }
+                </script>
+                    </div>
                 </div>
             </div>
-            <div class = "row" id = "cadastro-row">
-                <div class = "col-md-10 mx-auto" id = "cadastro-btns">
-                    <button type = "button" class = "empresa">Como empresa</button>
-                    <button type = "button" class = "candidato" onclick="cadastrar_candidato()">Como candidato</button>
-			<script>
-				function cadastrar_candidato () {
-				   location.href = "./cadastro_candidato.html"; 
-				}
-			</script>
+        
+
+            <!--Seção de áreas de atuação-->
+            <div class = "container" id = "areas">
+                <hr>
+                <div class = "row">
+                    <div class = "col-md-8 mx-auto" id = "areas-col">
+                        <h2>Selecione sua área de atuação e encontre vagas</h3>
+                    </div>
+                </div>
+                <div class = "row" id = "areas-dropdown-row">
+                    <div class = "col-lg-12" id = "areas-dropdown">
+                        <div class = "dropdown areas-dropdown">
+                            <button class = "dropbtn dropbtn-areas"><p id = "areas-btn-title">Áreas de atuação</p><i class="fa fa-angle-double-down"></i></button>
+                            <div class="dropdown-content dropdown-content-area">
+                                <a href="#">Administração</a>
+                                <a href="#">Biotecnologia</a>
+                                <a href="#">Contabilidade</a>
+                                <a href="#">Design</a>
+                                <a href="#">Educação</a>
+                                <a href="#">Farmácia</a>
+                                <a href="#">Gastronomia</a>
+                                <a href="#">Informática</a>
+                                <a href="#">Jornalismo</a>
+                                <a href="#">Logística</a>
+                                <a href="#">Medicina</a>
+                                <a href="#">Odontologia</a>
+                                <a href="#">Psicologia</a>
+                                <a href="#">Química</a>
+                                <a href="#">Recursos Humanos</a>
+                                <a href="#">Saúde</a>
+                                <a href="#">Tecnologia</a>
+                                <a href="#">Veterinária</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class =  "container-fluid w-100" id = "carousel-vagas-container">
+                    <div id="carousel-vagas" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class = "container">
+                                    <div class = "row" id="slides" style="padding-top: 50px;">
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0"> MyTech</h6> <span> 1 dia atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Tecnologia</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Estágio<br>Analista de Sistemas</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">32 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://www.acejundiai.com.br/wp-content/uploads/2019/06/png-internet-internet-icon-1600.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0">MinasTech</h6> <span>2 dias atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Marketing</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Sênior<br>Gestor de Marketing</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">22 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://icons-for-free.com/iconfiles/png/512/mario+mario+bros+mario+world+mushroom+toad+videogame+icon-1320196400529338074.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0">Geek</h6> <span>1 semana atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Tecnologia</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Trainee<br>Técnico em Informática</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">13 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class = "container">
+                                    <div class = "row" id="slides" style="padding-top: 50px;">
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0"> MyTech</h6> <span> 1 dia atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Tecnologia</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Estágio<br>Analista de Sistemas</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">32 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://www.acejundiai.com.br/wp-content/uploads/2019/06/png-internet-internet-icon-1600.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0">MinasTech</h6> <span>2 dias atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Marketing</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Sênior<br>Gestor de Marketing</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">22 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://icons-for-free.com/iconfiles/png/512/mario+mario+bros+mario+world+mushroom+toad+videogame+icon-1320196400529338074.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0">Geek</h6> <span>1 semana atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Tecnologia</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Trainee<br>Técnico em Informática</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">13 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class = "container">
+                                    <div class = "row" id="slides" style="padding-top: 50px;">
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0"> MyTech</h6> <span> 1 dia atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Tecnologia</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Estágio<br>Analista de Sistemas</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">32 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://www.acejundiai.com.br/wp-content/uploads/2019/06/png-internet-internet-icon-1600.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0">MinasTech</h6> <span>2 dias atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Marketing</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Sênior<br>Gestor de Marketing</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">22 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-4" id="vaga">
+                                            <div class="card p-3 mb-2">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div class="icon"> <img src="https://icons-for-free.com/iconfiles/png/512/mario+mario+bros+mario+world+mushroom+toad+videogame+icon-1320196400529338074.png" > </div>
+                                                        <div class="ms-2 empresa-detalhes">
+                                                            <h6 class="mb-0">Geek</h6> <span>1 semana atrás</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="categoria"> <span>Tecnologia</span> </div>
+                                                </div>
+                                                <div class="mt-5">
+                                                    <h3 class="heading">Trainee<br>Técnico em Informática</h3>
+                                                    <div class="mt-5">
+                                                        <div class="mt-3"> <span class="text1">13 pessoas<span class="text2"> se candidataram</span></span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class = "row" id = "areas-ajuda-row">
+                    <div class = "col-lg-12" id = "areas-ajuda">
+                        <p id = "semArea">Não consegue encontrar sua área?<a href = "#"> Contate-nos!</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Seção de Sobre nós e Contatos-->
+            <div class = "container-fluid AboutUs">
+                <div class = "row AboutUs-row">
+                    <div class = "col-lg-5 AboutUs-col">
+                        <h5 id = "AboutUs-title">Sobre nós</h5>
+                        <hr>
+                        <p id = "AboutUs-text">Este é um site de vagas de emprego construido por alunos do 1º período
+                            do curso de Ciência da Computação, na disciplina de Trabalho Interdisciplinar - Aplicaçôes Web, 
+                            na Pontifícia Universidade Católica de Minas Gerais.
+                        </p>
+                    </div>
+                    <div class = "col-lg-4 Contacts-col">
+                        <h5 id = "Contacts-title">Contatos</h5>
+                        <hr>
+                        <ul id = "lista-contatos">
+                            <li id = "email"><i class="fa fa-envelope"></i><p id = "contact-item"><b>E-mail:</b> labore.com@gmail.com</p></li>
+                            <li id = "email"><i class="fa fa-phone"></i><p id = "contact-item"><b>Telefone:</b> 0800 1234 5678</p></li>
+                            <li id = "email"><i class="fa fa-whatsapp"></i><p id = "contact-item"><b>WhatsApp:</b> 31 91234 5678</p></li>
+                        </ul>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+                    <div class = "col-lg-3 logo-col">
+                        <img src = "./logo.png" id = "rodape-logo">
+                    </div>
                 </div>
             </div>
         </div>
         
-
-        <!--Seção de áreas de atuação-->
-        <div class = "container" id = "areas">
-            <hr>
-            <div class = "row">
-                <div class = "col-md-8 mx-auto" id = "areas-col">
-                    <h2>Selecione sua área de atuação e encontre vagas</h3>
-                </div>
-            </div>
-            <div class = "row" id = "areas-dropdown-row">
-                <div class = "col-lg-12" id = "areas-dropdown">
-                    <div class = "dropdown areas-dropdown">
-                        <button class = "dropbtn dropbtn-areas"><p id = "areas-btn-title">Áreas de atuação</p><i class="fa fa-angle-double-down"></i></button>
-                        <div class="dropdown-content dropdown-content-area">
-                            <a href="#">Administração</a>
-                            <a href="#">Biotecnologia</a>
-                            <a href="#">Contabilidade</a>
-                            <a href="#">Design</a>
-                            <a href="#">Educação</a>
-                            <a href="#">Farmácia</a>
-                            <a href="#">Gastronomia</a>
-                            <a href="#">Informática</a>
-                            <a href="#">Jornalismo</a>
-                            <a href="#">Logística</a>
-                            <a href="#">Medicina</a>
-                            <a href="#">Odontologia</a>
-                            <a href="#">Psicologia</a>
-                            <a href="#">Química</a>
-                            <a href="#">Recursos Humanos</a>
-                            <a href="#">Saúde</a>
-                            <a href="#">Tecnologia</a>
-                            <a href="#">Veterinária</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class =  "container-fluid w-100" id = "carousel-vagas-container">
-                <div id="carousel-vagas" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class = "container">
-                                <div class = "row" id="slides" >
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class = "container">
-                                <div class = "row" id="slides" >
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class = "container">
-                                <div class = "row" id="slides" >
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class = "col-lg-4" id="vaga">
-                                        <div class = "card vaga-card">
-                                            <div class = "card-header card-header-vaga">
-                                                Vaga 1
-                                            </div>
-                                            <div class = "card-body card-body-vaga">
-                                                Este é um exemplo de vaga
-                                            </div>
-                                            <div class = "card-footer card-footer-vaga">
-                                                Adcionar a playlist
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-            <div class = "row" id = "areas-ajuda-row">
-                <div class = "col-lg-12" id = "areas-ajuda">
-                    <p id = "semArea">Não consegue encontrar sua área?<a href = "#"> Contate-nos!</a></p>
-                </div>
-            </div>
-        </div>
-
-        <!--Seção de Sobre nós e Contatos-->
-        <div class = "container-fluid AboutUs">
-            <div class = "row AboutUs-row">
-                <div class = "col-lg-5 AboutUs-col">
-                    <h5 id = "AboutUs-title">Sobre nós</h5>
-                    <hr>
-                    <p id = "AboutUs-text">Este é um site de vagas de emprego construido por alunos do 1º período
-                        do curso de Ciência da Computação, na disciplina de Trabalho Interdisciplinar - Aplicaçôes Web, 
-                        na Pontifícia Universidade Católica de Minas Gerais.
-                    </p>
-                </div>
-                <div class = "col-lg-4 Contacts-col">
-                    <h5 id = "Contacts-title">Contatos</h5>
-                    <hr>
-                    <ul id = "lista-contatos">
-                        <li id = "email"><i class="fa fa-envelope"></i><p id = "contact-item"><b>E-mail:</b> labore.com@gmail.com</p></li>
-                        <li id = "email"><i class="fa fa-phone"></i><p id = "contact-item"><b>Telefone:</b> 0800 1234 5678</p></li>
-                        <li id = "email"><i class="fa fa-whatsapp"></i><p id = "contact-item"><b>WhatsApp:</b> 31 91234 5678</p></li>
-                    </ul>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                </div>
-                <div class = "col-lg-3 logo-col">
-                    <img src = "./logo.png" id = "rodape-logo">
-                </div>
-            </div>
-        </div>
         <!-- jQuery and JS bundle w/ Popper.js -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

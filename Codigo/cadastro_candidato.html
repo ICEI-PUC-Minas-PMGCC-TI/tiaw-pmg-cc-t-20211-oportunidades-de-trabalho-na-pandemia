@@ -36,206 +36,79 @@
         </div>
 
         <!--Formulario-->
-        <div class = "container container-cadastro">
-            <div class = "row title-row">
-                <div class = "col-lg-12 md-auto">
-                    <h3 style="margin-bottom: 0px; padding-bottom: 40px;">Formulário de Cadastro</h3>
-                </div>
-            </div>
-            <div class = "row form-row">
-                <div class = "col-lg-12 form-col">
-                    <form id = "cadastro_form">
-
-                        <div class="line-break"><h5 style="margin-bottom: 30px;">Dados Pessoais</h5></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class="col-lg-6" style="margin-bottom: 15px;">
-                                <label for = "nome">Nome completo:</label><br>
-                                <input id = "nome" type = "text" name = "nome" required>
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "nascimento">Data de nascimento:</label><br>
-                                <input id = "nascimento" type = "date" name = "nascimento" required>
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "genero">Gênero:</label><br>
-                                <select id="genero" name="genero" required>
-                                    <option>Selecione um gênero</option>
-                                    <option>Masculino</option>
-                                    <option>Feminino</option>
-                                    <option>Outro</option>
-                                    <option>Prefiro não informar</option>
-                                </select>
-                            </div>
+        <div class="container mt-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <form id="regForm">
+                        <h1 id="register">Cadastro de Candidatos</h1>
+                        <div class="all-steps" id="all-steps"> 
+                          <span class="step"><i class="fa fa-user"></i></span> 
+                          <span class="step"><i class="fa fa-map-marker"></i></span> 
+                          <span class="step"><i class="fa fa-pencil-square-o"></i></span> 
+                          <span class="step"><i class="fa fa-address-book"></i></span>  
+                          <span class="step"><i class="fa fa-check-circle"></i></span> 
                         </div>
-
-                        <div class="line-break"></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-6" style="margin-bottom: 15px;">
-                                <label for = "email">E-mail:</label><br>
-                                <input id = "email" type="email" name = "celular" required>
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "telefone">Telefone:</label><br>
-                                <input id = "telefone" type="text" name = "telefone" required>
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "celular">Celular:</label><br>
-                                <input id = "celular" type="text" name = "celular" required>
-                            </div>
+                        <div class="tab">
+                            <h6>Nome completo<span class = "required">*</span></h6>
+                            <p> <input id="name" oninput="this.className = ''" name="name"></p>
+                            <h6>Data de nascimento:<span class = "required">*</span></h6>
+                            <p> <input id = "nascimento" oninput="this.className = ''" type = "date" name = "nascimento"></p>
+                            <h6>Gênero:<span class = "required">*</span></h6>
+                            <p><select id="genero" name="genero" oninput="this.className = ''" required>
+                                <option>Selecione um gênero</option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                                <option>Outro</option>
+                                <option>Prefiro não informar</option>
+                            </select></p>
                         </div>
-
-                        <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Formação Acadêmica</h5></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-4" style="margin-bottom: 15px;">
-                                <label for = "escolaridade">Escolaridade:</label>
-                                <select id="escolaridade1" name="escolaridade" required>
-                                    <option>Selecione sua escolaridade</option>
-                                    <option>Ensino Fundamental incompleto</option>
-                                    <option>Ensino Fundamental completo</option>
-                                    <option>Ensino Médio incompleto</option>
-                                    <option>Ensino Médio completo</option>
-                                    <option>Ensino Superior incompleto</option>
-                                    <option>Ensino Superior completo</option>
-                                </select>
-                            </div>
-                            <div class = "col-lg-8" style="margin-bottom: 15px;">
-                                <label for = "instituicao">Instituição:</label>
-                                <input id = "instituicao1" type="text" name = "instituicao" required>
-                            </div>
+                        <div class="tab">
+                            <h6>Estado onde reside<span class = "required">*</span></h6>
+                            <p><input id="cidade" oninput="this.className = ''" name="estado"></p>
+                            <h6>Cidade onde reside<span class = "required">*</span></h6>
+                            <p><input id="estado" oninput="this.className = ''" name="cidade"></p>
                         </div>
-
-                        <div class="line-break"></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-4" style="margin-bottom: 15px;">
-                                <label for = "escolaridade">Escolaridade:</label>
-                                <select id="escolaridade2" name="escolaridade" required>
-                                    <option>Selecione sua escolaridade</option>
-                                    <option>Ensino Fundamental incompleto</option>
-                                    <option>Ensino Fundamental completo</option>
-                                    <option>Ensino Médio incompleto</option>
-                                    <option>Ensino Médio completo</option>
-                                    <option>Ensino Superior incompleto</option>
-                                    <option>Ensino Superior completo</option>
-                                </select>
-                            </div>
-                            <div class = "col-lg-8" style="margin-bottom: 15px;">
-                                <label for = "instituicao">Instituição:</label>
-                                <input id = "instituicao2" type="text" name = "instituicao" required>
-                            </div>
+                        <div class="tab">
+                            <h6>E-mail:<span class = "required">*</span></h6>
+                            <p><input id="email" oninput="this.className = ''" name="email"></p>
+                            <h6>Celular:</h6>
+                            <p><input id="celular" oninput="this.className = ''" name="celular"></p>
+                            <h6>Telefone</h6>
+                            <p><input id="telefone" oninput="this.className = ''" name="telefone"></p>
                         </div>
-                        
-                        <div class="line-break"></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-4" style="margin-bottom: 15px;">
-                                <label for = "escolaridade">Escolaridade:</label>
-                                <select id="escolaridade3" name="escolaridade" required>
-                                    <option>Selecione sua escolaridade</option>
-                                    <option>Ensino Fundamental incompleto</option>
-                                    <option>Ensino Fundamental completo</option>
-                                    <option>Ensino Médio incompleto</option>
-                                    <option>Ensino Médio completo</option>
-                                    <option>Ensino Superior incompleto</option>
-                                    <option>Ensino Superior completo</option>
-                                </select>
-                            </div>
-                            <div class = "col-lg-8" style="margin-bottom: 15px;">
-                                <label for = "instituicao">Instituição:</label>
-                                <input id = "instituicao3" type="text" name = "instituicao" required>
-                            </div>
+                        <div class="tab">
+                            <h6>Escolaridade:<span class = "required">*</span></h6>
+                            <p><select id="escolaridade" name="escolaridade" oninput="this.className = ''">
+                                <option>Selecione sua escolaridade</option>
+                                <option>Ensino Fundamental incompleto</option>
+                                <option>Ensino Fundamental completo</option>
+                                <option>Ensino Médio incompleto</option>
+                                <option>Ensino Médio completo</option>
+                                <option>Ensino Superior incompleto</option>
+                                <option>Ensino Superior completo</option>
+                            </select></p>
+                            <h6>Área de atuação:<span class = "required">*</span></h6>
+                            <h6><i>Se não possuir área de atuação, escreva o que você faz no momento. Exemplo: estudante, desempregao, etc.</i></h6>
+                            <p><input id="atuacao" oninput="this.className = ''" name="atuacao"></p>
                         </div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-12" style="margin-bottom: 15px;">
-                                <button type = "button" id = "mais_formacao" style="display: inline; float: right;"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais formação</button>
-                            </div>
+                        <div class="tab">
+                            <h6>Sobre Mim:<span class = "required">*</span></h6>
+                            <p><textarea name = "descricao" class = "field-style" id = "descricao" ></textarea></p>
                         </div>
-                        
-                        <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Experiência Profissional</h5></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-5" style="margin-bottom: 15px;">
-                                <label for = "empresa">Empresa:</label>
-                                <input id = "empresa1" type="text" name = "emrpesa">
-                            </div>
-                            <div class = "col-lg-4" style="margin-bottom: 15px;">
-                                <label for = "cargo">Cargo:</label>
-                                <input id = "cargo1" type="text" name = "cargo">
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "tempo">Tempo de atuação:</label>
-                                <input id = "tempo1" name = "name" type="text">
-                            </div>
+                        <script>
+                          document.addEventListener ( 'DOMContentLoaded', () => {
+                              document.getElementById ('descricao').addEventListener("change", registerCandidate );
+                          });
+                        </script>
+                        <div class="thanks-message text-center" id="text-message">
+                          <h3>Candidato registrado com sucesso!</h3> <span>Para registrar mais Candidatos, clique <a href="./cadastro_candidato.html">aqui</a>.</span>
                         </div>
-
-                        <div class="line-break"></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-5" style="margin-bottom: 15px;">
-                                <label for = "empresa">Empresa:</label>
-                                <input id = "empresa2" type="text" name = "emrpesa">
-                            </div>
-                            <div class = "col-lg-4" style="margin-bottom: 15px;">
-                                <label for = "cargo">Cargo:</label>
-                                <input id = "cargo2" type="text" name = "cargo">
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "tempo">Tempo de atuação:</label>
-                                <input id = "tempo2" name = "name" type="text">
-                            </div>
-                        </div>
-
-                        <div class="line-break"></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-5" style="margin-bottom: 15px;">
-                                <label for = "empresa">Empresa:</label>
-                                <input id = "empresa3" type="text" name = "emrpesa">
-                            </div>
-                            <div class = "col-lg-4" style="margin-bottom: 15px;">
-                                <label for = "cargo">Cargo:</label>
-                                <input id = "cargo3" type="text" name = "cargo">
-                            </div>
-                            <div class = "col-lg-3" style="margin-bottom: 15px;">
-                                <label for = "tempo">Tempo de atuação:</label>
-                                <input id = "tempo3" name = "tempo" type="text">
-                            </div>
-                        </div>
-                        <div class = "row" style="width: 100%;">
-                            <div class = "col-lg-12" style="margin-bottom: 15px;">
-                                <button type = "button" id = "mais_experiencia" style="display: inline; float: right;"><i class='fa fa-plus' style="padding-right: 5px;"></i> adcionar mais experiência</button>
-                            </div>
-                        </div>
-
-                        <div class="line-break"><h5 style="margin-bottom: 30px; margin-top: 30px;">Dados do Perfil</h5></div>
-                        <div class = "row" style="width: 100%;">
-                            <div class="col-lg-6" style="margin-bottom: 15px;">
-                            <label for = "sobre_mim">Sobre mim:</label>
-                            <span class = "code">
-                                <b>
-                                    <textarea id = "sobre_mim"></textarea>
-                                </b>
-                            </span>
-                            </div>
-                            <div class = "col-lg-6" style="margin-bottom: 15px; justify-content: center; display: flex; align-items: center;">
-                                <div class="image-upload-one">
-                                    <div>
-                                        <div class="form-input" style="height: 200px; width: auto;">
-                                            <label for = "img_one">Selecione a foto de perfil:</label>
-                                            <label for="file-ip-1" style="height: fit-content; width: fit-content; display: flex; justify-content: center; align-items: center;">
-                                                <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png" >
-                                            </label>
-                                        </div>
-                                        <input type="file"  name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
-                                        <button type="button" class="imgRemove" onclick="myImgRemoveFunctionOne()">Remover imagem</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class = "row" style = "width: 100%; margin-bottom: 40px; margin-top: 50px;">
-                            <div class = "col-lg-12 ml-auto">
-                                <button onclick="cadastrado()" type = "submit" id = "form_btn">Cadastrar</button>
-                                <script>
-                                    document.addEventListener ( 'DOMContentLoaded', () => {
-                                        document.getElementById ('form_btn').addEventListener('click', registerCandidate );
-                                    });
-                                </script>
+                        <div style="overflow:auto;" id="nextprevious">
+                            <div style="float:right;"> 
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </button> 
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)"><i class="fa fa-angle-double-right"></i></button>
                             </div>
                         </div>
                     </form>
