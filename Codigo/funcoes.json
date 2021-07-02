@@ -1,4 +1,0 @@
-{
-    "var myJSON" : {"name": "Ana Cristina"},
-    "var myObj"  : {JSON.parse (myJSON)};
-}
