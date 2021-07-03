@@ -15,11 +15,13 @@ ul {
     height: fit-content;
     width: 100%;
     background-color: rgb(136, 192, 252);
+    
 }
 
 a.navbar-brand img {
     height: 56px;
     width: auto;
+    
 }
 
 /* The sidebar menu */
@@ -70,6 +72,15 @@ a.navbar-brand img {
     border: none;
     border-radius: 10px;
 }
+
+.container{
+    max-width: 1200px;
+
+    margin : 0 auto
+
+    border : 1px solid #fff;
+
+}
   
 .openbtn:hover {
     background-color: rgb(47, 1, 248);
@@ -99,9 +110,10 @@ a.closebtn {
     width: fit-content;
     display: inline;
     float: left;
-    padding-left: 40px;
+    padding-left: 850px;
     padding-bottom: 40px;
     margin: 0px;
+    
 }
 .dropbtn {
     background-color: transparent;
@@ -164,10 +176,23 @@ i.fa-angle-double-down {
 
 .cursos-col {
     padding-bottom: 50px;
+    
 }
 
 #cursos {
+    font-weight:bold;
     font-family: "arial", "verdana", "sans-serif";
     text-align: center
+    
  
+}
+
+img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.photo {
+    grid-template-columns: 1fr; 
 }
